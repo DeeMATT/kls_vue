@@ -150,6 +150,9 @@ import Vue from 'vue'
 
 export default {
   layout: 'default',
+  fetch({ store }) {
+    store.commit('app/SET_DARK_MENU', true)
+  },
   data: () => ({
     tags: [
       'Bitcoin',
