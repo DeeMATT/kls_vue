@@ -17,33 +17,68 @@
       </div>
     </section>
     <section class="bg-white">
-      <div class="container mx-auto my-10">
-        <h5 class="prose-xl font-semibold text-gray-600 mb-8">
-          Top Categories
-        </h5>
-        <div class="grid grid-cols-4 gap-5">
-          <a
-            v-for="category in topCategories"
-            :key="category.name"
-            class="bg-white rounded-lg border border-gray-300 hover:shadow-lg p-6 relative"
-          >
-            <span class="inline-block bg-gray-100 w-20 h-20 rounded-lg"></span>
-            <p class="prose-2xl text-orange-500 font-semibold my-3">
-              {{ category.name }}
-            </p>
-            <p>{{ category.desc }}</p>
-            <div class="text-center absolute bottom-0 mb-5">
-              <nuxt-link to="/" class="text-black"> View more </nuxt-link>
-            </div>
-          </a>
-        </div>
-
+      <div class="container mx-auto my-16">
+        <ItemsSectionGroup title="Top Categories">
+          <div class="grid grid-cols-4 gap-5">
+            <category-item
+              v-for="(category, key) in topCategories"
+              :key="key"
+              :category="category"
+            />
+          </div>
+        </ItemsSectionGroup>
+      </div>
+    </section>
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <ItemsSectionGroup title="Latest Courses" more="/courses/latest">
+          <div class="grid grid-cols-4 gap-5">
+            <course-item
+              v-for="(course, key) in latestCourses"
+              :key="key"
+              :course="course"
+            />
+          </div>
+        </ItemsSectionGroup>
+      </div>
+    </section>
+    <!-- <section class="bg-white">
+      <div class="container mx-auto my-16">
         <div class="bg-gray-200 rounded-lg p-10 py-16 mt-12">
           <div class="grid grid-cols-4">
             <div>Why Klasroom?</div>
             <div>Learn at your own pace and from anywhere</div>
             <div>Flexible payment options that allows for pay as you go.</div>
             <div>Learn from Africa’s most successful Entrepreneurs</div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <ItemsSectionGroup title="Latest Webinars" more="/webinars/latest">
+          <div class="grid grid-cols-4 gap-5">
+            <webinar-item
+              v-for="(webinar, key) in latestCourses"
+              :key="key"
+              :webinar="webinar"
+            />
+          </div>
+        </ItemsSectionGroup>
+      </div>
+    </section>
+    <section class="bg-white">
+      <div class="container mx-auto my-20">
+        <div class="text-center">
+          <img src="/logo-gray.svg" class="inline-block mb-4" />
+          <div>
+            <nuxt-link to="/" class="text-orange-500 underline font-semibold"
+              >Click here</nuxt-link
+            >
+            <span class="text-gray-800"
+              >to join our community on Telegram
+              <img src="/icon/paper-plane.svg" class="inline-block ml-2 mb-2"
+            /></span>
           </div>
         </div>
       </div>
@@ -73,6 +108,32 @@ export default {
       {
         name: 'Design',
         desc: 'Hone your visual process and learn design fundamentals.',
+      },
+    ],
+    latestCourses: [
+      {
+        name: 'Graphic Design for Beginners',
+        author: 'Sandra Eze',
+        desc: 'Starting your business or seeking funding? Let’s get you sorted',
+        photo: '',
+      },
+      {
+        name: 'Graphic Design for Beginners',
+        author: 'Sandra Eze',
+        desc: 'Starting your business or seeking funding? Let’s get you sorted',
+        photo: '',
+      },
+      {
+        name: 'User Interface Design Made Easy',
+        author: 'Chimdi BAM',
+        desc: 'Programming concepts for beginners and advanced learners',
+        photo: '',
+      },
+      {
+        name: 'All About Braids',
+        author: 'Sandra Eze',
+        desc: 'Starting your business or seeking funding? Let’s get you sorted',
+        photo: '',
       },
     ],
   }),

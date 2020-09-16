@@ -1,6 +1,8 @@
 {
   "name": "KlasroomApp",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "author": "Peter Odetayo",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "nuxt-ts",
@@ -16,11 +18,6 @@
   "lint-staged": {
     "*.{js,vue}": "eslint",
     "*.{css,vue}": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "@nuxt/content": "^1.5.0",
