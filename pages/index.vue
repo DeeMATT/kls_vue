@@ -1,16 +1,28 @@
 <template>
   <div>
     <section class="bg-orange-100">
-      <div class="container mx-auto min-h-screen">
+      <div class="container mx-auto">
         <div class="grid grid-cols-12">
-          <div class="col-span-7">
+          <div class="col-span-6">
             <h2 class="title font-bold mt-20">
-              Relevant knowledge to start earning immediately
+              Webinars and courses to up your game 🚀🚀
             </h2>
-            <p class="prose-xl mt-10" style="line-height: unset">
+            <p class="text-xl mt-10 mb-8" style="line-height: unset">
               Get relevant and practicable knowledge to kick start your
               business, upskill your career or increase your income.
             </p>
+            <search-box />
+            <div class="mt-8 mb-40">
+              <span class="text-xs text-gray-700 block mb-4"
+                >Popular searches</span
+              >
+              <span
+                v-for="(tag, key) in tags"
+                :key="key"
+                class="py-2 px-4 text-xs text-gray-900 bg-orange-200 rounded-full mr-2"
+                >{{ tag }}</span
+              >
+            </div>
           </div>
           <img src="/home-illust.svg" class="absolute top-40 right-0" />
         </div>
@@ -42,18 +54,65 @@
         </ItemsSectionGroup>
       </div>
     </section>
-    <!-- <section class="bg-white">
+    <section class="bg-white">
       <div class="container mx-auto my-16">
         <div class="bg-gray-200 rounded-lg p-10 py-16 mt-12">
-          <div class="grid grid-cols-4">
-            <div>Why Klasroom?</div>
-            <div>Learn at your own pace and from anywhere</div>
-            <div>Flexible payment options that allows for pay as you go.</div>
-            <div>Learn from Africa’s most successful Entrepreneurs</div>
+          <div class="grid grid-cols-4 gap-16">
+            <div>
+              <h3 class="text-4xl font-bold mt-4" style="line-height: normal">
+                Why Klasroom?
+              </h3>
+            </div>
+            <div>
+              <span
+                class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-blue-600 text-white"
+                >1</span
+              >
+              <p class="mt-5">Learn at your own pace and from anywhere</p>
+            </div>
+            <div>
+              <span
+                class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-orange-500 text-white"
+                >1</span
+              >
+              <p class="mt-5">
+                Flexible payment options that allows for pay as you go.
+              </p>
+            </div>
+            <div>
+              <span
+                class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-blue-400 text-white"
+                >1</span
+              >
+              <p class="mt-5">
+                Learn from Africa’s most successful Entrepreneurs
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <ItemsSectionGroup title="Trending" more="/trending">
+          <div class="grid grid-cols-4 gap-5">
+            <course-item
+              v-for="(course, key) in latestCourses"
+              :key="key"
+              :course="course"
+            />
+          </div>
+        </ItemsSectionGroup>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <create-webinar />
+      </div>
+    </section>
+
     <section class="bg-white">
       <div class="container mx-auto my-16">
         <ItemsSectionGroup title="Latest Webinars" more="/webinars/latest">
@@ -92,6 +151,13 @@ import Vue from 'vue'
 export default {
   layout: 'default',
   data: () => ({
+    tags: [
+      'Bitcoin',
+      'Agriculture',
+      'Fashion design',
+      'Development',
+      'Business',
+    ],
     topCategories: [
       {
         name: 'Busines and Finance',

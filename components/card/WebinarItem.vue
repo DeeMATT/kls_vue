@@ -9,10 +9,10 @@
       <img class="block min-w-full" src="/card/webinar.jpg" />
     </div>
     <div class="p-6">
-      <p class="prose-md text-gray-900 font-semibold mb-0">
+      <p class="text-md text-gray-900 font-semibold mb-0">
         {{ webinar.name }}
       </p>
-      <p class="prose-sm text-gray-700">{{ webinar.author }}</p>
+      <p class="text-sm text-gray-700">{{ webinar.author }}</p>
     </div>
     <div class="absolute grid grid-cols-2 w-full bottom-0 mb-5">
       <div class="pl-5">

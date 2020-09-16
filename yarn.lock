@@ -1661,11 +1661,6 @@
     remark "^12.0.0"
     unist-util-find-all-after "^3.0.1"
 
-"@tailwindcss/typography@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.2.0.tgz#b597c83502e3c3c6641a8aaabda223cd494ab349"
-  integrity sha512-aPgMH+CjQiScLZculoDNOQUrrK2ktkbl3D6uCLYp1jgYRlNDrMONu9nMu8LfwAeetYNpVNeIGx7WzHSu0kvECg==
-
 "@types/anymatch@*":
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
@@ -7904,11 +7899,6 @@ markdown-table@^2.0.0:
   integrity sha512-Ezda85ToJUBhM6WGaG6veasyym+Tbs3cMAw/ZhOPqXiYsr0jgocBV3j3nx+4lk47plLlIqjwuTm/ywVI+zjJ/A==
   dependencies:
     repeat-string "^1.0.0"
-
-marko-star-rating@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/marko-star-rating/-/marko-star-rating-3.1.3.tgz#6b0b80ba0fde78eb383897dafb5114a234eaffb4"
-  integrity sha512-KleSKcsJHoFAiZ1nWyXtsZYGJRw7jQSXtQpWXDmusl3bbDLHBedwYb4qJF9EHV4OP3ntgQXAj4V6OEOZr6kUHA==
 
 mathml-tag-names@^2.1.3:
   version "2.1.3"

@@ -9,16 +9,16 @@
       <img class="block min-w-full" src="/card/course.jpg" />
     </div>
     <div class="p-6">
-      <p class="prose-md text-gray-900 font-semibold mb-0">
+      <p class="text-md text-gray-900 font-semibold mb-0">
         {{ course.name }}
       </p>
-      <p class="prose-sm text-gray-700">{{ course.author }}</p>
+      <p class="text-sm text-gray-700">{{ course.author }}</p>
     </div>
     <div class="absolute grid grid-cols-2 w-full bottom-0 mb-5">
       <div class="pl-5">
         <rating :grade="3" :max-stars="5" />
       </div>
-      <div class="prose-sm text-gray-700 text-right pr-5">56 ratings</div>
+      <div class="text-sm text-gray-700 text-right pr-5">56 ratings</div>
     </div>
   </a>
 </template>
