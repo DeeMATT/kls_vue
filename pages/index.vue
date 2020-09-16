@@ -16,21 +16,17 @@
               <span class="text-xs text-gray-700 block mb-4"
                 >Popular searches</span
               >
-              <span
-                v-for="(tag, key) in tags"
-                :key="key"
-                class="py-2 px-4 text-xs text-gray-900 bg-orange-200 rounded-full mr-2"
-                >{{ tag }}</span
-              >
+              <tags-slider :tags="tags" />
             </div>
           </div>
           <img src="/home-illust.svg" class="absolute top-40 right-0" />
         </div>
       </div>
     </section>
+
     <section class="bg-white">
       <div class="container mx-auto my-16">
-        <ItemsSectionGroup title="Top Categories">
+        <items-section-group title="Top Categories">
           <div class="grid grid-cols-4 gap-5">
             <category-item
               v-for="(category, key) in topCategories"
@@ -38,56 +34,67 @@
               :category="category"
             />
           </div>
-        </ItemsSectionGroup>
+        </items-section-group>
       </div>
     </section>
+
     <section class="bg-white">
       <div class="container mx-auto my-16">
-        <ItemsSectionGroup title="Latest Courses" more="/courses/latest">
-          <div class="grid grid-cols-4 gap-5">
-            <course-item
-              v-for="(course, key) in latestCourses"
-              :key="key"
-              :course="course"
+        <div class="grid grid-cols-2 gap-5">
+          <div class="col-span-2">
+            <h2 class="text-5xl font-semibold text-center mb-5">
+              On Klasroom, you can...
+            </h2>
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <icon-card-lg
+              icon="/card/course-find-icon.svg"
+              title="Take Courses"
+              :desc="`Select from a broad range of available courses and start 
+                learning right away. These courses are taught by professionals 
+                with extensive knowledge and experience.`"
+              link-url="/courses"
+              link-text="Find a course"
             />
           </div>
-        </ItemsSectionGroup>
-      </div>
-    </section>
-    <section class="bg-white">
-      <div class="container mx-auto my-16">
-        <div class="bg-gray-200 rounded-lg p-10 py-16 mt-12">
-          <div class="grid grid-cols-4 gap-16">
-            <div>
-              <h3 class="text-4xl font-bold mt-4" style="line-height: normal">
-                Why Klasroom?
-              </h3>
-            </div>
-            <div>
-              <span
-                class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-blue-600 text-white"
-                >1</span
-              >
-              <p class="mt-5">Learn at your own pace and from anywhere</p>
-            </div>
-            <div>
-              <span
-                class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-orange-500 text-white"
-                >1</span
-              >
-              <p class="mt-5">
-                Flexible payment options that allows for pay as you go.
-              </p>
-            </div>
-            <div>
-              <span
-                class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-blue-400 text-white"
-                >1</span
-              >
-              <p class="mt-5">
-                Learn from Africa’s most successful Entrepreneurs
-              </p>
-            </div>
+          <div class="col-span-2 md:col-span-1">
+            <icon-card-lg
+              :dark="true"
+              bg="bg-blue-400"
+              icon="/card/webinar-find-icon.svg"
+              title="Attend Webinars"
+              :desc="`Select from a broad range of available courses and start 
+                learning right away. These courses are taught by professionals 
+                with extensive knowledge and experience.`"
+              link-url="/webinars"
+              link-text="Find a webinar"
+            />
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <icon-card-lg
+              :dark="true"
+              bg="bg-blue-600"
+              icon="/card/course-create-icon.svg"
+              title="Create &amp; Sell Courses"
+              :desc="`Select from a broad range of available courses and start 
+                learning right away. These courses are taught by professionals 
+                with extensive knowledge and experience.`"
+              link-url="/account/courses/create"
+              link-text="Create a course"
+            />
+          </div>
+          <div class="col-span-2 md:col-span-1">
+            <icon-card-lg
+              :dark="true"
+              bg="bg-blue-800"
+              icon="/card/webinar-create-icon.svg"
+              title="Host &amp; Sell Webinars"
+              :desc="`Select from a broad range of available courses and start 
+                learning right away. These courses are taught by professionals 
+                with extensive knowledge and experience.`"
+              link-url="/account/webinars/create"
+              link-text="Create a webinar"
+            />
           </div>
         </div>
       </div>
@@ -95,7 +102,7 @@
 
     <section class="bg-white">
       <div class="container mx-auto my-16">
-        <ItemsSectionGroup title="Trending" more="/trending">
+        <items-section-group title="Latest Courses" more="/courses/latest">
           <div class="grid grid-cols-4 gap-5">
             <course-item
               v-for="(course, key) in latestCourses"
@@ -103,7 +110,27 @@
               :course="course"
             />
           </div>
-        </ItemsSectionGroup>
+        </items-section-group>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <why-klasroom />
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <items-section-group title="Trending" more="/trending">
+          <div class="grid grid-cols-4 gap-5">
+            <course-item
+              v-for="(course, key) in latestCourses"
+              :key="key"
+              :course="course"
+            />
+          </div>
+        </items-section-group>
       </div>
     </section>
 
@@ -115,7 +142,7 @@
 
     <section class="bg-white">
       <div class="container mx-auto my-16">
-        <ItemsSectionGroup title="Latest Webinars" more="/webinars/latest">
+        <items-section-group title="Latest Webinars" more="/webinars/latest">
           <div class="grid grid-cols-4 gap-5">
             <webinar-item
               v-for="(webinar, key) in latestCourses"
@@ -123,9 +150,10 @@
               :webinar="webinar"
             />
           </div>
-        </ItemsSectionGroup>
+        </items-section-group>
       </div>
     </section>
+
     <section class="bg-white">
       <div class="container mx-auto my-20">
         <div class="text-center">
