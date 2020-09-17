@@ -142,6 +142,33 @@
 
     <section class="bg-white">
       <div class="container mx-auto my-16">
+        <div class="grid grid-cols-2 gap-5">
+          <div>
+            <items-section-group title="Top Rated Courses" more="/trending">
+              <course-item-wide
+                v-for="(course, key) in latestCourses"
+                :key="key"
+                :course="course"
+                class="mb-4"
+              />
+            </items-section-group>
+          </div>
+          <div>
+            <items-section-group title="Top Rated Webinars" more="/trending">
+              <webinar-item-wide
+                v-for="(webinar, key) in latestCourses"
+                :key="key"
+                :webinar="webinar"
+                class="mb-4"
+              />
+            </items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
         <items-section-group title="Latest Webinars" more="/webinars/latest">
           <div class="grid grid-cols-4 gap-5">
             <webinar-item
@@ -151,6 +178,12 @@
             />
           </div>
         </items-section-group>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <become-tutor-or-student />
       </div>
     </section>
 

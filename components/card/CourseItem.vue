@@ -1,6 +1,7 @@
 <template>
-  <a
-    class="bg-white rounded-lg border border-gray-300 shadow-hover relative pb-12"
+  <nuxt-link
+    to="/"
+    class="block bg-white rounded-lg border border-gray-300 shadow-hover relative pb-12"
   >
     <div class="absolute mt-3 ml-3">
       <span class="top-tag">Course</span>
@@ -20,7 +21,7 @@
       </div>
       <div class="text-sm text-gray-700 text-right pr-5">56 ratings</div>
     </div>
-  </a>
+  </nuxt-link>
 </template>
 
 <script>

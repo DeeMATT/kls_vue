@@ -7,7 +7,7 @@
       <nuxt-link
         v-if="more"
         :to="more"
-        class="view-more hover:text-orange-500 text-black text-sm inline-block mt-2"
+        class="view-more text-black text-sm inline-block mt-1"
       >
         {{ 'See more' }}
       </nuxt-link>
