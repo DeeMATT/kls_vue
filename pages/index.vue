@@ -4,7 +4,7 @@
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
           <div class="col-span-12 md:col-span-6 px-4 lg:px-0">
-            <h2 class="title text-4xl md:text-5xl font-bold md:mt-20 pt-10">
+            <h2 class="title text-4xl md:text-5xl font-bold md:mt-20 mt-10">
               Webinars and courses to up your game 🚀🚀
             </h2>
             <p class="text-md md:text-xl mt-10 mb-8" style="line-height: unset">
@@ -215,7 +215,6 @@
 import Vue from 'vue'
 
 export default {
-  layout: 'default',
   fetch({ store }) {
     store.commit('app/SET_DARK_MENU', true)
   },
