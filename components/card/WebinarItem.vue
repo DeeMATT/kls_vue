@@ -33,9 +33,6 @@ export default {
 </script>
 
 <style scoped>
-.shadow-hover:hover {
-  box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
-}
 .top-tag {
   background-color: rgba(0, 0, 0, 0.25);
   padding: 4px 20px 4px 8px;
@@ -55,8 +52,5 @@ export default {
   top: 8px;
   background: #f99e42;
   position: absolute;
-}
-.view-more {
-  @apply bg-white;
 }
 </style>

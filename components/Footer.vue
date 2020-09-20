@@ -1,11 +1,11 @@
 <template>
   <section>
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4 lg:px-0">
       <div class="grid grid-cols-12 py-12">
         <div class="col-span-3">
           <img src="/logo.svg" />
         </div>
-        <div class="col-span-5">
+        <div class="col-span-12 md:col-span-5">
           <div class="grid grid-cols-12 text-sm">
             <div class="col-span-3">
               <strong class="block font-semibold mb-3">Links</strong>
@@ -15,7 +15,7 @@
                 <li><nuxt-link to="/">Blogs</nuxt-link></li>
               </ul>
             </div>
-            <div class="col-span-5">
+            <div class="col-span-12 md:col-span-5">
               <strong class="block font-semibold mb-3">Register</strong>
               <ul>
                 <li><nuxt-link to="/">Become an instructor</nuxt-link></li>

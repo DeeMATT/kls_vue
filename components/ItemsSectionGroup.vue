@@ -24,13 +24,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.view-more {
-  display: inline-block;
-  background: url('/actions/arrow-right.svg');
-  background-repeat: no-repeat;
-  background-position: right 0 top 3px;
-  padding: 0 20px 0 0;
-}
-</style>

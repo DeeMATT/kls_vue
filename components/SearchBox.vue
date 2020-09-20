@@ -1,9 +1,6 @@
 <template>
   <div>
-    <input
-      class="search-box"
-      placeholder="Search a course, webinar or tutor"
-    />
+    <input class="search-box" placeholder="Search a course, webinar or tutor" />
   </div>
 </template>
 
@@ -23,5 +20,14 @@ export default {}
   box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
   border-radius: 8px;
   min-width: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .search-box {
+    background-position: top 18px right 15px;
+    padding: 15px 20px;
+    box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
+    border-radius: 8px;
+    min-width: 100%;
+  }
 }
 </style>

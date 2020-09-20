@@ -13,9 +13,7 @@
           </p>
         </div>
         <div class="col-span-12">
-          <nuxt-link
-            to="/"
-            class="py-4 px-6 text-white bg-orange-500 rounded-lg"
+          <nuxt-link to="/" class="btn btn-primary"
             >Create tutor account now</nuxt-link
           >
         </div>
@@ -32,9 +30,7 @@
           </p>
         </div>
         <div class="col-span-12">
-          <nuxt-link
-            to="/"
-            class="py-4 px-6 text-white bg-orange-500 rounded-lg"
+          <nuxt-link to="/" class="btn btn-primary"
             >Create student account now</nuxt-link
           >
         </div>
