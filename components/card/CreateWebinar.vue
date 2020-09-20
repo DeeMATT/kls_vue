@@ -1,12 +1,15 @@
 <template>
   <div class="create-webinar bg-orange-200 rounded-lg p-10 py-20 mt-12">
-    <div class="grid grid-cols-12 gap-16">
-      <div class="col-span-7 pb-56">
-        <h3 class="text-4xl font-bold pb-4" style="line-height: normal">
+    <div class="grid md:grid-cols-12 gap-16">
+      <div class="md:col-span-7 md:pb-56">
+        <h3
+          class="text-2xl lg:text-4xl font-bold pb-4"
+          style="line-height: normal"
+        >
           The most seamless way to hold webinars
         </h3>
       </div>
-      <div class="col-span-5">
+      <div class="md:col-span-5 pb-64 md:pb-0">
         <ul class="block mb-16">
           <li class="d-block">Host up to 5000 students at once</li>
           <li>Sell tickets to your webinars</li>
@@ -15,9 +18,7 @@
           <li>Share files and media with students</li>
           <li>Take polls to get students’ opinions</li>
         </ul>
-        <nuxt-link to="/" class="py-4 px-6 text-white bg-orange-500 rounded-lg"
-          >Create Webinar</nuxt-link
-        >
+        <nuxt-link to="/" class="btn btn-primary">Create Webinar</nuxt-link>
       </div>
     </div>
   </div>

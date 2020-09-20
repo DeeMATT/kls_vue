@@ -1,7 +1,9 @@
 <template>
   <div :class="{ 'bg-orange-100': darkMenu }">
     <div class="container mx-auto">
-      <nav class="flex items-center justify-between flex-wrap py-6">
+      <nav
+        class="flex items-center justify-between flex-wrap py-4 md:py-6 px-4 lg:px-0"
+      >
         <div class="flex items-center flex-shrink-0 mr-6">
           <img src="/logo.svg" />
         </div>
@@ -45,10 +47,10 @@
             </a>
           </div>
           <div>
-            <router-link to="/login" class="lg:mr-4 font-semibold">
+            <router-link to="/login" class="btn lg:mr-4 font-semibold">
               Log In
             </router-link>
-            <router-link to="/signup" class="signup-btn lg:mt-0"
+            <router-link to="/signup" class="btn btn-primary lg:mt-0"
               >Sign Up</router-link
             >
           </div>

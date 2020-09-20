@@ -53,10 +53,4 @@ export default {
   background: #0797ce;
   position: absolute;
 }
-.shadow-hover:hover {
-  box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
-}
-.view-more {
-  @apply bg-white;
-}
 </style>

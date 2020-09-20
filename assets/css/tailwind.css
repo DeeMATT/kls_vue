@@ -3,3 +3,27 @@
 @import 'tailwindcss/utilities';
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap');
+
+.btn {
+  @apply font-semibold rounded-lg;
+  padding: 13.5px 36px;
+}
+
+.btn.btn-primary {
+  @apply  text-white bg-orange-500;
+}
+
+.view-more {
+  display: inline-block;
+  background: url('/actions/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: right 0 top 3px;
+  padding: 0 20px 0 0;
+}
+.view-more.light {
+  background-image: url('/actions/arrow-right-light.svg');
+}
+
+.shadow-hover:hover {
+  box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
+}

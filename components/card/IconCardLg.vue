@@ -1,13 +1,16 @@
 <template>
-  <div class="rounded-lg p-16" :class="bg">
-    <img v-if="icon" :src="icon" class="inline-block mb-8" />
+  <div class="rounded-lg p-6 sm:p-8 md:p-16" :class="bg">
+    <img v-if="icon" :src="icon" class="inline-block mb-8 w-16 md:w-24" />
     <h3
-      class="text-4xl font-semibold mb-5"
+      class="text-3xl md:text-4xl font-semibold leading-9 md:leading-10 mb-5"
       :class="dark ? 'text-white' : 'text-black'"
     >
       {{ title }}
     </h3>
-    <p class="text-sm mb-5" :class="dark ? 'text-white' : 'text-black'">
+    <p
+      class="text-xs md:text-sm mb-5"
+      :class="dark ? 'text-white' : 'text-black'"
+    >
       {{ desc }}
     </p>
     <nuxt-link
@@ -34,16 +37,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.view-more {
-  display: inline-block;
-  background: url('/actions/arrow-right.svg');
-  background-repeat: no-repeat;
-  background-position: right 0 top 3px;
-  padding: 0 20px 0 0;
-}
-.view-more.light {
-  background-image: url('/actions/arrow-right-light.svg');
-}
-</style>

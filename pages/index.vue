@@ -3,31 +3,34 @@
     <section class="bg-orange-100">
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
-          <div class="col-span-6">
-            <h2 class="title font-bold mt-20">
+          <div class="col-span-12 md:col-span-6 px-4 lg:px-0">
+            <h2 class="title text-4xl md:text-5xl font-bold md:mt-20 pt-10">
               Webinars and courses to up your game 🚀🚀
             </h2>
-            <p class="text-xl mt-10 mb-8" style="line-height: unset">
+            <p class="text-md md:text-xl mt-10 mb-8" style="line-height: unset">
               Get relevant and practicable knowledge to kick start your
               business, upskill your career or increase your income.
             </p>
             <search-box />
-            <div class="mt-8 mb-40">
+            <div class="mt-8 mb-6 lg:mb-32">
               <span class="text-xs text-gray-700 block mb-4"
                 >Popular searches</span
               >
               <tags-slider :tags="tags" />
             </div>
           </div>
-          <img src="/home-illust.svg" class="absolute top-40 right-0" />
+          <img
+            src="/home-illust.svg"
+            class="lg:absolute lg:top-0 right-0 col-span-12 lg:mt-32"
+          />
         </div>
       </div>
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Top Categories">
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
             <category-item
               v-for="(category, key) in topCategories"
               :key="key"
@@ -39,10 +42,12 @@
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
         <div class="grid grid-cols-2 gap-5">
           <div class="col-span-2">
-            <h2 class="text-5xl font-semibold text-center mb-5">
+            <h2
+              class="text-2xl md:text-3xl lg:text-5xl leading-8 font-semibold text-center mb-5"
+            >
               On Klasroom, you can...
             </h2>
           </div>
@@ -101,9 +106,9 @@
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Latest Courses" more="/courses/latest">
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             <course-item
               v-for="(course, key) in latestCourses"
               :key="key"
@@ -121,9 +126,9 @@
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Trending" more="/trending">
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             <course-item
               v-for="(course, key) in latestCourses"
               :key="key"
@@ -141,8 +146,8 @@
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16">
-        <div class="grid grid-cols-2 gap-5">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
+        <div class="grid md:grid-cols-2 gap-5">
           <div>
             <items-section-group title="Top Rated Courses" more="/trending">
               <course-item-wide
@@ -168,9 +173,9 @@
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Latest Webinars" more="/webinars/latest">
-          <div class="grid grid-cols-4 gap-5">
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             <webinar-item
               v-for="(webinar, key) in latestCourses"
               :key="key"
@@ -277,7 +282,6 @@ export default {
 }
 */
 .title {
-  font-size: 48px;
   line-height: 120%;
 }
 </style>

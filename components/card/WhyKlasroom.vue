@@ -1,6 +1,6 @@
 <template>
   <div class="bg-gray-200 rounded-lg p-10 py-16 mt-12">
-    <div class="grid grid-cols-4 gap-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16">
       <div>
         <h3 class="text-4xl font-bold mt-4" style="line-height: normal">
           Why Klasroom?
