@@ -4,9 +4,9 @@
       <nav
         class="flex items-center justify-between flex-wrap py-4 md:py-6 px-4 lg:px-0"
       >
-        <div class="flex items-center flex-shrink-0 mr-6">
+        <nuxt-link to="/" class="flex items-center flex-shrink-0 mr-6">
           <img src="/logo.svg" />
-        </div>
+        </nuxt-link>
         <div class="block lg:hidden">
           <button
             class="flex items-center px-3 py-2 border rounded text-gray-700 border-gray-900"
@@ -27,24 +27,24 @@
           class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
         >
           <div class="mx-auto">
-            <a
-              href="#responsive-header"
+            <nuxt-link
+              to="/courses"
               class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-4"
             >
               Courses
-            </a>
-            <a
-              href="#responsive-header"
+            </nuxt-link>
+            <nuxt-link
+              to="/webinars"
               class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-4"
             >
               Webinars
-            </a>
-            <a
-              href="#responsive-header"
+            </nuxt-link>
+            <nuxt-link
+              to="/blog"
               class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500"
             >
               Blog
-            </a>
+            </nuxt-link>
           </div>
           <div>
             <router-link to="/login" class="btn lg:mr-4 font-semibold">
