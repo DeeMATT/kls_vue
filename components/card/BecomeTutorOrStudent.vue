@@ -1,5 +1,9 @@
 <template>
-  <div class="becomes bg-orange-200 rounded-lg p-10 py-20 mt-12">
+  <div class="relative bg-orange-200 rounded-lg p-10 py-20 mt-12">
+    <img
+      src="/card/yellow-squares.png"
+      class="absolute -mt-32 -mr-40 right-0"
+    />
     <div class="grid grid-cols-2 gap-6">
       <div class="grid grid-cols-12 gap-4">
         <div class="col-span-5 pb-5">
@@ -36,15 +40,11 @@
         </div>
       </div>
     </div>
+    <img src="/card/red-bubbles.png" class="absolute -mt-32 -ml-64 left-0" />
   </div>
 </template>
 
 <style scoped>
-.becomes {
-  background-image: url('/card/yellow-squares.png');
-  background-repeat: no-repeat;
-  background-position: right 0 bottom 0;
-}
 li {
   display: block;
   padding: 5px 0 5px 25px;

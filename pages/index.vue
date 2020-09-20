@@ -12,7 +12,7 @@
               business, upskill your career or increase your income.
             </p>
             <search-box />
-            <div class="mt-8 mb-6 lg:mb-32">
+            <div class="mt-8 mb-6 lg:mb-40">
               <span class="text-xs text-gray-700 block mb-4"
                 >Popular searches</span
               >
@@ -21,14 +21,14 @@
           </div>
           <img
             src="/home-illust.svg"
-            class="lg:absolute lg:top-0 right-0 col-span-12 lg:mt-32"
+            class="lg:absolute lg:top-0 right-0 col-span-12 lg:mt-32 xl:mr-6 lg:-mr-16"
           />
         </div>
       </div>
     </section>
 
     <section class="bg-white">
-      <div class="container mx-auto my-16 px-4 lg:px-0">
+      <div class="container mx-auto mt-16 mb-24 px-4 lg:px-0">
         <items-section-group title="Top Categories">
           <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
             <category-item
@@ -46,7 +46,7 @@
         <div class="grid grid-cols-2 gap-5">
           <div class="col-span-2">
             <h2
-              class="text-2xl md:text-3xl lg:text-5xl leading-8 font-semibold text-center mb-5"
+              class="text-2xl md:text-3xl lg:text-5xl leading-8 font-bold text-center mb-8"
             >
               On Klasroom, you can...
             </h2>
@@ -142,6 +142,12 @@
     <section class="bg-white">
       <div class="container mx-auto my-16">
         <create-webinar />
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-16">
+        <webinars-calendar />
       </div>
     </section>
 

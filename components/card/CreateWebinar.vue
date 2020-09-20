@@ -1,11 +1,8 @@
 <template>
   <div class="create-webinar bg-orange-200 rounded-lg p-10 py-20 mt-12">
-    <div class="grid md:grid-cols-12 gap-16">
+    <div class="grid md:grid-cols-12 gap-10">
       <div class="md:col-span-7 md:pb-56">
-        <h3
-          class="text-2xl lg:text-4xl font-bold pb-4"
-          style="line-height: normal"
-        >
+        <h3 class="text-2xl lg:text-4xl font-bold pb-4 leading-10 lg:pr-32">
           The most seamless way to hold webinars
         </h3>
       </div>

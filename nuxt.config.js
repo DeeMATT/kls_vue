@@ -34,7 +34,12 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    '~plugins/vform',
+    '~plugins/axios',
+    '~plugins/vue2-filters',
+    { src: '~plugins/datepicker', mode: 'client' },
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components

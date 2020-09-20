@@ -2,7 +2,7 @@
   <div class="rounded-lg p-6 sm:p-8 md:p-16" :class="bg">
     <img v-if="icon" :src="icon" class="inline-block mb-8 w-16 md:w-24" />
     <h3
-      class="text-3xl md:text-4xl font-semibold leading-9 md:leading-10 mb-5"
+      class="text-3xl md:text-4xl font-bold leading-9 md:leading-10 mb-5"
       :class="dark ? 'text-white' : 'text-black'"
     >
       {{ title }}
