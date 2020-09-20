@@ -54,7 +54,7 @@
 <script>
 export default {
   data: () => ({
-    date: null,
+    date: new Date(),
   }),
 }
 </script>
