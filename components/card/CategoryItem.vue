@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white rounded-lg border border-gray-300 shadow-hover relative">
     <div class="p-6 pb-20">
-      <span class="inline-block bg-gray-100 w-16 h-16 rounded-lg"></span>
+      <span class="inline-block bg-gray-200 w-16 h-16 rounded-lg"></span>
       <p
         class="text-2xl text-orange-500 font-semibold my-5"
         style="line-height: normal"
