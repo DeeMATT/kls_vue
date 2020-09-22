@@ -90,7 +90,7 @@ export default {
 @media (min-width: 768px) {
   .menu-group {
     @apply flex items-center w-auto shadow-none;
-    @apply bg-transparent px-4 px-0 mt-0;
+    @apply bg-transparent px-0 mt-0;
   }
 }
 </style>
