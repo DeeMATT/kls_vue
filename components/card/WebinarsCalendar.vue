@@ -3,7 +3,7 @@
     <div class="mb-4">
       <button class="toggle font-semibold">Webinars in September 2020</button>
     </div>
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-6">
       <div>
         <datepicker
           v-model="date"

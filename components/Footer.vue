@@ -2,12 +2,12 @@
   <section>
     <div class="container mx-auto px-4 lg:px-0">
       <div class="grid grid-cols-12 py-12">
-        <div class="col-span-3">
+        <div class="col-span-6 md:col-span-3 mb-8 md:mb-0">
           <img src="/logo.svg" />
         </div>
         <div class="col-span-12 md:col-span-5">
-          <div class="grid grid-cols-12 text-sm">
-            <div class="col-span-3">
+          <div class="grid grid-cols-12 text-sm mb-10 md:mb-0">
+            <div class="col-span-5 md:col-span-3 mb-8 md:mb-0">
               <strong class="block font-semibold mb-3">Links</strong>
               <ul>
                 <li><nuxt-link to="/">Courses</nuxt-link></li>
@@ -15,14 +15,14 @@
                 <li><nuxt-link to="/">Blogs</nuxt-link></li>
               </ul>
             </div>
-            <div class="col-span-12 md:col-span-5">
+            <div class="col-span-7 md:col-span-5 mb-8 md:mb-0">
               <strong class="block font-semibold mb-3">Register</strong>
               <ul>
                 <li><nuxt-link to="/">Become an instructor</nuxt-link></li>
                 <li><nuxt-link to="/">Become a student</nuxt-link></li>
               </ul>
             </div>
-            <div class="col-span-4">
+            <div class="col-span-12 md:col-span-4">
               <strong class="block font-semibold mb-3">Resources</strong>
               <ul>
                 <li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
@@ -30,7 +30,7 @@
             </div>
           </div>
         </div>
-        <div class="col-span-4">
+        <div class="col-span-12 md:col-span-4">
           <p class="mb-0">
             <small class="text-xs">
               The leading online learning platform for hands on learning

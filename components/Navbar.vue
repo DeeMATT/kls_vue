@@ -1,13 +1,14 @@
 <template>
   <div :class="{ 'bg-orange-100': darkMenu }">
     <div class="container mx-auto">
-      <nav
-        class="flex items-center justify-between flex-wrap py-4 md:py-6 px-4 lg:px-0"
-      >
-        <nuxt-link to="/" class="flex items-center flex-shrink-0 mr-6">
+      <nav class="flex items-center justify-between flex-wrap py-4 md:py-6">
+        <nuxt-link
+          to="/"
+          class="flex items-center flex-shrink-0 mr-6 ml-4 lg:ml-0"
+        >
           <img src="/logo.svg" />
         </nuxt-link>
-        <div class="block lg:hidden">
+        <div class="block lg:hidden mr-4 lg:mr-0">
           <button
             class="flex items-center px-3 py-2 border rounded text-gray-700 border-gray-900"
             @click="toggleMenu"
@@ -22,10 +23,7 @@
             </svg>
           </button>
         </div>
-        <div
-          :class="{ hidden: !open }"
-          class="w-full block flex-grow lg:flex lg:items-center lg:w-auto"
-        >
+        <div :class="{ hidden: !open }" class="menu-group">
           <div class="mx-auto">
             <nuxt-link
               to="/courses"
@@ -46,11 +44,16 @@
               Blog
             </nuxt-link>
           </div>
-          <div>
-            <router-link to="/login" class="btn lg:mr-4 font-semibold">
+          <div class="mt-8 md:mt-0 mb-6 md:mb-0">
+            <router-link
+              to="/login"
+              class="btn lg:mr-4 bg-blue-400 text-white md:text-black md:bg-transparent block md:inline-block text-center mb-5 md:mb-0"
+            >
               Log In
             </router-link>
-            <router-link to="/signup" class="btn btn-primary lg:mt-0"
+            <router-link
+              to="/signup"
+              class="btn btn-primary lg:mt-0 block md:inline-block text-center"
               >Sign Up</router-link
             >
           </div>
@@ -80,11 +83,14 @@ export default {
 </script>
 
 <style scoped>
-.signup-btn {
-  @apply inline-block px-4 py-3 leading-none border rounded-md font-semibold;
-  @apply bg-orange-500 text-white;
+.menu-group {
+  @apply transition duration-500;
+  @apply w-full flex-grow bg-white mt-5 shadow-lg px-4;
 }
-.signup-btn:hover {
-  @apply bg-orange-600;
+@media (min-width: 768px) {
+  .menu-group {
+    @apply flex items-center w-auto shadow-none;
+    @apply bg-transparent px-0 mt-0;
+  }
 }
 </style>

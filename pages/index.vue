@@ -201,7 +201,10 @@
     <section class="bg-white">
       <div class="container mx-auto my-20">
         <div class="text-center">
-          <img src="/logo-gray.svg" class="inline-block mb-4" />
+          <img
+            src="/logo-gray.svg"
+            class="inline-block mb-8 sm:mb-4 w-3/6 sm:w-auto"
+          />
           <div>
             <nuxt-link to="/" class="text-orange-500 underline font-semibold"
               >Click here</nuxt-link
