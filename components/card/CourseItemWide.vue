@@ -11,17 +11,17 @@
           </p>
           <p class="text-sm text-gray-700">{{ course.author }}</p>
         </div>
-        <div class="absolute grid grid-cols-2 w-full bottom-0 mb-5">
+        <div class="absolute md:grid md:grid-cols-2 w-full bottom-0 mb-5">
           <div class="pl-5">
             <rating :grade="3" :max-stars="5" />
           </div>
-          <div class="text-sm text-gray-700 text-right pr-5">56 ratings</div>
+          <div class="text-sm text-gray-700 pl-5 md:pl-0 md:text-right pr-5">56 ratings</div>
         </div>
       </div>
       <div class="col-span-5">
-        <div class="item-img rounded-br-lg overflow-hidden">
-          <img class="block min-w-full" src="/card/course.jpg" />
-        </div>
+        <picture class="item-img rounded-br-lg overflow-hidden">
+          <img class="block" src="/card/course.jpg" />
+        </picture>
       </div>
     </div>
   </nuxt-link>
@@ -55,5 +55,13 @@ export default {
   top: 8px;
   background: #0797ce;
   position: absolute;
+}
+picture {
+  display: block;
+  height: 100%;
+}
+picture img {
+  height: 100%;
+  width: auto;
 }
 </style>
