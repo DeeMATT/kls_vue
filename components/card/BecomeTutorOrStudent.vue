@@ -1,18 +1,20 @@
 <template>
-  <div class="relative bg-orange-200 rounded-lg p-10 py-20 mt-12">
+  <div
+    class="relative bg-orange-200 rounded-lg p-5 pt-10 pb-16 md:p-10 md:py-20 md:mt-12"
+  >
     <img
       src="/card/yellow-squares.png"
-      class="absolute -mt-32 -mr-40 right-0"
+      class="hidden md:inline-block absolute -mt-32 -mr-40 right-0"
     />
-    <div class="grid grid-cols-2 gap-6">
-      <div class="grid grid-cols-12 gap-4">
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="md:grid md:grid-cols-12 gap-4 mb-10 md:mb-0">
         <div class="col-span-5 pb-5">
           <h4 class="text-4xl font-bold" style="line-height: 120%">
-            Become a tutor
+            Become a <br />tutor
           </h4>
         </div>
         <div class="col-span-5 pb-5">
-          <p class="text-md pb-2 mt-2">
+          <p class="text-md pb-5 md:pb-2 mt-2">
             Have you been there, done that? Turn your knowledge to cash
           </p>
         </div>
@@ -22,14 +24,14 @@
           >
         </div>
       </div>
-      <div class="grid grid-cols-12 gap-4">
+      <div class="md:grid md:grid-cols-12 gap-4">
         <div class="col-span-5">
           <h4 class="text-4xl font-bold pb-5" style="line-height: 120%">
             Become a student
           </h4>
         </div>
         <div class="col-span-6 pb-5">
-          <p class="text-md pb-2 mt-2">
+          <p class="text-md pb-5 md:pb-2 mt-2">
             Learn from seasoned experts and turn your insights to cash
           </p>
         </div>
@@ -40,7 +42,10 @@
         </div>
       </div>
     </div>
-    <img src="/card/red-bubbles.png" class="absolute -mt-32 -ml-64 left-0" />
+    <img
+      src="/card/red-bubbles.png"
+      class="hidden md:inline-block absolute -mt-32 -ml-64 left-0"
+    />
   </div>
 </template>
 
