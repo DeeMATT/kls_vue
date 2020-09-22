@@ -11,17 +11,19 @@
           </p>
           <p class="text-sm text-gray-700">{{ webinar.author }}</p>
         </div>
-        <div class="absolute grid grid-cols-2 w-full bottom-0 mb-5">
+        <div class="absolute mg:grid md:grid-cols-2 w-full bottom-0 mb-5">
           <div class="pl-5">
             <span class="text-sm text-gray-700">12th Oct. 2020</span>
           </div>
-          <div class="text-sm text-gray-500 text-right pr-5">20 slots left</div>
+          <div class="text-sm text-gray-500 md:text-right pl-5 md:pl-0 pr-5">
+            20 slots left
+          </div>
         </div>
       </div>
       <div class="col-span-5">
-        <div class="item-img rounded-br-lg overflow-hidden">
-          <img class="block min-w-full" src="/card/webinar.jpg" />
-        </div>
+        <picture class="item-img rounded-br-lg overflow-hidden">
+          <img class="block" src="/card/webinar.jpg" />
+        </picture>
       </div>
     </div>
   </nuxt-link>
@@ -55,5 +57,13 @@ export default {
   top: 8px;
   background: #f99e42;
   position: absolute;
+}
+picture {
+  display: block;
+  height: 100%;
+}
+picture img {
+  height: 100%;
+  width: auto;
 }
 </style>
