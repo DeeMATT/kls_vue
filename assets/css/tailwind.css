@@ -24,8 +24,12 @@ html {
 }
 
 .btn {
-  @apply font-semibold rounded-lg;
+  @apply text-sm font-semibold rounded-lg;
   padding: 13.5px 36px;
+}
+
+.btn:hover, .btn:focus {
+  outline: none;
 }
 
 .btn.btn-primary {

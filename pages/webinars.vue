@@ -25,11 +25,34 @@
         </div>
       </div>
     </section>
+    <section class="bg-white">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
+        <div class="grid grid-cols-12 gap-12">
+          <div class="col-span-3">
+            <filter-course />
+          </div>
+          <div class="col-span-9">
+            <items-section-group title="210 Webinars">
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <webinar-item
+                  v-for="(webinar, key) in webinars"
+                  :key="key"
+                  :webinar="webinar"
+                />
+              </div>
+            </items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+
+const tags = require('@/static/json/tags-courses.json')
+const webinars = require('@/static/json/webinars.json')
 
 export default {
   fetch({ store }) {
@@ -37,13 +60,8 @@ export default {
   },
   data: () => ({
     home: 'home',
-    tags: [
-      'Bitcoin',
-      'Agriculture',
-      'Fashion design',
-      'Development',
-      'Business',
-    ],
+    tags,
+    webinars,
   }),
 }
 </script>

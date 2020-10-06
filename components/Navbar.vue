@@ -27,19 +27,25 @@
           <div class="mx-auto">
             <nuxt-link
               to="/courses"
-              class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-4"
+              class="menu-item mt-4 block lg:inline-block lg:mt-0"
             >
               Courses
             </nuxt-link>
             <nuxt-link
               to="/webinars"
-              class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500 mr-4"
+              class="menu-item mt-4 block lg:inline-block lg:mt-0"
             >
               Webinars
             </nuxt-link>
             <nuxt-link
+              to="/klasroom-for-business"
+              class="menu-item mt-4 block lg:inline-block lg:mt-0"
+            >
+              Klasroom for Business
+            </nuxt-link>
+            <nuxt-link
               to="/blog"
-              class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-orange-500"
+              class="menu-item mt-4 block lg:inline-block lg:mt-0 mr-0"
             >
               Blog
             </nuxt-link>
@@ -47,13 +53,13 @@
           <div class="mt-8 md:mt-0 mb-6 md:mb-0">
             <router-link
               to="/login"
-              class="btn lg:mr-4 bg-blue-400 text-white md:text-black md:bg-transparent block md:inline-block text-center mb-5 md:mb-0"
+              class="btn lg:mr-4 bg-blue-400 text-white md:text-black md:bg-transparent block md:inline-block mb-5 md:mb-0"
             >
               Log In
             </router-link>
             <router-link
               to="/signup"
-              class="btn btn-primary lg:mt-0 block md:inline-block text-center"
+              class="btn btn-primary lg:mt-0 block md:inline-block"
               >Sign Up</router-link
             >
           </div>
@@ -86,6 +92,21 @@ export default {
 .menu-group {
   @apply transition duration-500;
   @apply w-full flex-grow bg-white mt-5 shadow-lg px-4;
+}
+.menu-item {
+  @apply text-sm text-black mr-8;
+}
+.menu-item:hover {
+  @apply text-orange-500;
+}
+.menu-item.has-child {
+  background-image: url('/actions/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right 0 top 8px;
+  padding-right: 24px;
+}
+.btn {
+  @apply text-center;
 }
 @media (min-width: 768px) {
   .menu-group {
