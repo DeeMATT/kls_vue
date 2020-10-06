@@ -183,7 +183,7 @@
         <items-section-group title="Latest Webinars" more="/webinars/latest">
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             <webinar-item
-              v-for="(webinar, key) in latestCourses"
+              v-for="(webinar, key) in latestWebinars"
               :key="key"
               :webinar="webinar"
             />
@@ -221,64 +221,20 @@
 </template>
 
 <script>
-import Vue from 'vue'
+const latestCourses = require('@/static/json/courses.json')
+const latestWebinars = require('@/static/json/webinars.json')
+const categories = require('@/static/json/top-categories.json')
+const tags = require('@/static/json/tags-courses.json')
 
 export default {
   fetch({ store }) {
     store.commit('app/SET_DARK_MENU', true)
   },
   data: () => ({
-    tags: [
-      'Bitcoin',
-      'Agriculture',
-      'Fashion design',
-      'Development',
-      'Business',
-    ],
-    topCategories: [
-      {
-        name: 'Busines and Finance',
-        desc: 'Starting your business or seeking funding? Let’s get you sorted',
-      },
-      {
-        name: 'Software Development',
-        desc: 'Programming concepts for beginners and advanced learners',
-      },
-      {
-        name: 'Writing',
-        desc: 'Say it like you mean it, learn from the best writers',
-      },
-      {
-        name: 'Design',
-        desc: 'Hone your visual process and learn design fundamentals.',
-      },
-    ],
-    latestCourses: [
-      {
-        name: 'Graphic Design for Beginners',
-        author: 'Sandra Eze',
-        desc: 'Starting your business or seeking funding? Let’s get you sorted',
-        photo: '',
-      },
-      {
-        name: 'Graphic Design for Beginners',
-        author: 'Sandra Eze',
-        desc: 'Starting your business or seeking funding? Let’s get you sorted',
-        photo: '',
-      },
-      {
-        name: 'User Interface Design Made Easy',
-        author: 'Chimdi BAM',
-        desc: 'Programming concepts for beginners and advanced learners',
-        photo: '',
-      },
-      {
-        name: 'All About Braids',
-        author: 'Sandra Eze',
-        desc: 'Starting your business or seeking funding? Let’s get you sorted',
-        photo: '',
-      },
-    ],
+    tags,
+    topCategories: categories,
+    latestCourses,
+    latestWebinars,
   }),
 }
 </script>

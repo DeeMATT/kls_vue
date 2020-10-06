@@ -25,11 +25,33 @@
         </div>
       </div>
     </section>
+    <section class="bg-white">
+      <div class="container mx-auto my-16 px-4 lg:px-0">
+        <div class="grid grid-cols-12 gap-12">
+          <div class="col-span-3">
+            <filter-course />
+          </div>
+          <div class="col-span-9">
+            <items-section-group title="320 Courses">
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <course-item
+                  v-for="(course, key) in courses"
+                  :key="key"
+                  :course="course"
+                />
+              </div>
+            </items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+
+const courses = require('@/static/json/courses.json')
 
 export default {
   fetch({ store }) {
@@ -44,6 +66,7 @@ export default {
       'Development',
       'Business',
     ],
+    courses,
   }),
 }
 </script>

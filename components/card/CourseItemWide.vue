@@ -31,7 +31,7 @@
 export default {
   props: {
     course: { type: Object, required: true },
-  }
+  },
 }
 </script>
 

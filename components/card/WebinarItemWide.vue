@@ -33,7 +33,7 @@
 export default {
   props: {
     webinar: { type: Object, required: true },
-  }
+  },
 }
 </script>
 
