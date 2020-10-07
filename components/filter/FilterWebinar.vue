@@ -56,12 +56,12 @@
         </label>
       </li>
     </ul>
-    <p class="sub-title mb-2">Duration</p>
+    <p class="sub-title mb-2">Date</p>
     <div class="mb-8">
       <input
         v-model="duration"
-        type="text"
-        placeholder="Select course duration"
+        type="date"
+        placeholder="Search by date"
         class="input"
       />
     </div>
