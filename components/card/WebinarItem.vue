@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    to="/"
+    :to="'/webinars/' + webinar.slug"
     class="block bg-white rounded-lg border border-gray-300 shadow-hover relative pb-12"
   >
     <div class="absolute mt-3 ml-3">

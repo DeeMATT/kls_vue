@@ -25,6 +25,7 @@
         </div>
       </div>
     </section>
+
     <section class="bg-white">
       <div class="container mx-auto my-16 px-4 lg:px-0">
         <div class="grid grid-cols-12 gap-4">
@@ -43,6 +44,12 @@
             </items-section-group>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="bg-white">
+      <div class="container mx-auto my-20">
+        <telegram-community-section />
       </div>
     </section>
   </div>

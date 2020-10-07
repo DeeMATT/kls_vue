@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    to="/"
+    :to="'/courses/' + course.slug"
     class="block bg-white rounded-lg border border-gray-300 shadow-hover"
   >
     <div class="grid grid-cols-12">
