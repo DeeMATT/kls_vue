@@ -200,29 +200,15 @@
 
     <section class="bg-white">
       <div class="container mx-auto my-20">
-        <div class="text-center">
-          <img
-            src="/logo-gray.svg"
-            class="inline-block mb-8 sm:mb-4 w-3/6 sm:w-auto"
-          />
-          <div>
-            <nuxt-link to="/" class="text-orange-500 underline font-semibold"
-              >Click here</nuxt-link
-            >
-            <span class="text-gray-800"
-              >to join our community on Telegram
-              <img src="/icon/paper-plane.svg" class="inline-block ml-2 mb-2"
-            /></span>
-          </div>
-        </div>
+        <telegram-community-section />
       </div>
     </section>
   </div>
 </template>
 
 <script>
-const latestCourses = require('@/static/json/courses.json')
-const latestWebinars = require('@/static/json/webinars.json')
+const latestCourses = require('@/static/json/latest-courses.json')
+const latestWebinars = require('@/static/json/latest-webinars.json')
 const categories = require('@/static/json/top-categories.json')
 const tags = require('@/static/json/tags-courses.json')
 

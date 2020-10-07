@@ -59,7 +59,7 @@
     <p class="sub-title mb-2">Date</p>
     <div class="mb-8">
       <input
-        v-model="duration"
+        v-model="date"
         type="date"
         placeholder="Search by date"
         class="input"
@@ -88,6 +88,7 @@ export default {
   data: () => ({
     difficulty: [],
     price: [],
+    date: 0.0,
     category: '',
     tutor: '',
   }),

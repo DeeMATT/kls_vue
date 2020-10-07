@@ -88,6 +88,7 @@ export default {
   data: () => ({
     difficulty: [],
     price: [],
+    duration: null,
     category: '',
     tutor: '',
   }),
