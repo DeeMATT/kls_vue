@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen mb-24">
     <section class="bg-orange-100">
       <div class="container mx-auto">
         <h2 class="title text-4xl md:text-5xl font-bold md:pt-10 pt-8 mb-8">
@@ -27,11 +27,11 @@
     </section>
     <section class="bg-white">
       <div class="container mx-auto my-16 px-4 lg:px-0">
-        <div class="grid grid-cols-12 gap-12">
-          <div class="col-span-3">
-            <filter-course />
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-2">
+            <filter-webinar />
           </div>
-          <div class="col-span-9">
+          <div class="col-span-10 lg:ml-24">
             <items-section-group title="210 Webinars">
               <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <webinar-item
