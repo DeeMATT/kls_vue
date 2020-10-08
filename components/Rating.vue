@@ -1,6 +1,6 @@
 <template>
   <div class="rating">
-    <ul class="list">
+    <ul class="list" :class="{ 'mr-4': hasCounter }">
       <li
         v-for="(star, key) in maxStars"
         :key="key"
@@ -23,7 +23,11 @@
 <script>
 export default {
   name: 'Rating',
-  props: ['grade', 'maxStars', 'hasCounter'],
+  props: {
+    grade: { type: Number, required: true },
+    maxStars: { type: Number, default: 5 },
+    hasCounter: { type: Boolean, default: false },
+  },
   data() {
     return {
       stars: this.grade,
@@ -50,7 +54,6 @@ export default {
 }
 .list {
   padding: 0;
-  margin: 0 20px 0 0;
 }
 .star {
   display: inline-block;
