@@ -17,7 +17,7 @@
     </div>
     <div class="absolute grid grid-cols-2 w-full bottom-0 mb-5">
       <div class="pl-5">
-        <rating :grade="3" :max-stars="5" />
+        <rating :grade="3" />
       </div>
       <div class="text-sm text-gray-700 text-right pr-5">56 ratings</div>
     </div>

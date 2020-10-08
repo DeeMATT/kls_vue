@@ -91,6 +91,10 @@ input[type="date"] {
   @apply  text-white bg-orange-500;
 }
 
+.btn.btn-primary.shadow {
+  box-shadow: 0px 10px 36px rgba(249, 158, 66, 0.42);
+}
+
 .view-more {
   display: inline-block;
   background: url('/actions/arrow-right.svg');
