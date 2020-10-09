@@ -46,8 +46,9 @@
               </div>
               <hr />
             </div>
+
             <div class="mt-16 mb-16">
-              <h5 class="flex-grow font-semibold text-gray-600 mb-8">Tutor</h5>
+              <h5 class="flex-grow font-semibold text-gray-600 mb-5">Tutor</h5>
               <div class="flex">
                 <img src="/avatar-medium.jpg" class="rounded-lg mr-8" />
                 <div>
