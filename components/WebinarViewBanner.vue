@@ -1,19 +1,34 @@
 <template>
   <div class="grid lg:grid-cols-12 gap-10">
     <div class="col-span-12 lg:col-span-5 px-4 lg:px-0 hidden md:block">
-      <div class="banner-card flex px-12 py-40">
+      <div class="banner-card text-center px-12 pt-40 pb-12">
         <button class="btn btn-primary mx-auto my-auto">
-          Gain Full Access
+          Reserve Slot Now
         </button>
+        <div class="mt-6">
+          <p class="font-semibold text-sm text-white">
+            This webinar will start in
+          </p>
+          <div class="countdown-timer mt-4">
+            <span>2</span>
+            days
+            <span>14</span>
+            hours
+            <span>22</span>
+            minutes
+            <span>16</span>
+            seconds
+          </div>
+        </div>
       </div>
     </div>
     <div class="lg:col-span-6">
       <h2 class="font-bold mb-8 leading-tight lg:pr-12">
-        How to Build Multiple Sources of Income
+        The Cryptocurrency Masterclass
       </h2>
       <p class="text-md md:text-md mb-8 text-gray-700 leading-normal">
-        Learn how to build and manage multiple sources of income that leads to
-        sustainable wealth
+        Everything you need to know about Cryptocurrency and ways you can profit
+        from it
       </p>
       <div class="flex mb-10 md:mb-16">
         <img src="/avatar.jpg" class="rounded-full mr-3 w-8 h-8" />
@@ -29,12 +44,12 @@
       </div>
       <div class="grid grid-cols-12 gap-y-6">
         <div class="col-span-6 md:col-span-3">
-          <span class="text-sm text-gray-700 block"> 4.5/5 stars</span>
-          <rating :grade="4" />
+          <span class="text-sm text-gray-700 block mb-1">30th Sep. 2020</span>
+          <p class="text-xs text-gray-500 mb-0">Date</p>
         </div>
         <div class="col-span-6 md:col-span-2">
           <span class="text-sm text-gray-700 block mb-1">56</span>
-          <p class="text-xs text-gray-500 mb-0">Ratings</p>
+          <p class="text-xs text-gray-500 mb-0">Signed up</p>
         </div>
         <div class="col-span-6 md:col-span-3">
           <span class="text-sm text-gray-700 block mb-1">42</span>
@@ -51,7 +66,7 @@
 
 <style scoped>
 .banner-card {
-  background-image: url('/course-view-bg.jpg');
+  background-image: url('/webinar-view-bg.jpg');
   background-repeat: no-repeat;
   background-position: 0;
   background-size: cover;
@@ -76,5 +91,10 @@
 .social-icons > li.share > a {
   background-image: url('/icon/social/share.svg');
 }
-
+.countdown-timer {
+  @apply text-xs text-white font-semibold;
+}
+.countdown-timer > span {
+  @apply text-xl font-extrabold inline-block px-1;
+}
 </style>

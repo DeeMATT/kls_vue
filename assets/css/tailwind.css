@@ -23,6 +23,34 @@ html {
   margin: 0;
 }
 
+h1 {
+  @apply text-5xl; /* 48px */ /* text-2xl sm:text-4xl md:text-5xl */
+}
+
+h2 {
+  @apply text-4xl; /* 36px */
+}
+
+h3 {
+  @apply text-3xl; /* 30px */
+}
+
+h4 {
+  @apply text-2xl; /* 24px */
+}
+
+h5 {
+  @apply text-xl; /* 20px */
+}
+
+h6 {
+  @apply text-lg; /* 18px */
+}
+
+.lead {
+  @apply text-base;
+}
+
 select,
 .cs-select,
 input[type="text"],
