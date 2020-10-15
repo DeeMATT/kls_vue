@@ -1,7 +1,10 @@
 <template>
   <div class="bg-none">
     <div class="flex mb-5">
-      <h5 v-if="title" class="flex-grow font-semibold text-gray-600">
+      <h5
+        v-if="title"
+        class="text-lg md:text-xl flex-grow font-semibold text-gray-600"
+      >
         {{ title }}
       </h5>
       <nuxt-link

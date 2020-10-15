@@ -1,12 +1,12 @@
 <template>
   <div class="create-webinar bg-orange-200 rounded-lg p-10 py-20 mt-12">
-    <div class="grid md:grid-cols-12 gap-10">
+    <div class="grid md:grid-cols-12 gap-6 md:gap-10">
       <div class="md:col-span-7 md:pb-56">
-        <h3
-          class="text-2xl lg:text-4xl font-bold md:pb-4 leading-8 md:leading-10 lg:pr-32"
+        <h2
+          class="text-2xl md:text-4xl font-bold pb-0 md:pb-4 leading-8 md:leading-10 lg:pr-32"
         >
           The most seamless way to hold webinars
-        </h3>
+        </h2>
       </div>
       <div class="md:col-span-5 pb-64 md:pb-0 mb-6 mb:mb-0">
         <ul class="block mb-16">

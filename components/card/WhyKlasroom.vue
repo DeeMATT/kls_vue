@@ -1,34 +1,45 @@
 <template>
-  <div class="bg-gray-200 rounded-lg p-10 py-16 mt-12">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-16">
+  <div class="bg-gray-200 rounded-lg px-6 md:px-10 py-16 mt-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16">
       <div>
-        <h3 class="text-4xl font-bold mt-4" style="line-height: normal">
-          Why Klasroom?
-        </h3>
+        <h2 class="font-bold leading-tight md:mt-4">Why Klasroom?</h2>
       </div>
-      <div>
-        <span
-          class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-blue-600 text-white"
+      <div class="flex md:block">
+        <span class="numbering pt-3 w-12 h-12 text-xl rounded-full bg-blue-600"
           >1</span
         >
-        <p class="mt-5">Learn at your own pace and from anywhere</p>
+        <p class="ml-4 md:mt-5 md:ml-0">
+          Learn at your own pace and from anywhere
+        </p>
       </div>
-      <div>
+      <div class="flex md:block">
         <span
-          class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-orange-500 text-white"
+          class="numbering pt-3 w-12 h-12 text-xl rounded-full bg-orange-500"
           >1</span
         >
-        <p class="mt-5">
+        <p class="ml-4 md:mt-5 md:ml-0">
           Flexible payment options that allows for pay as you go.
         </p>
       </div>
-      <div>
-        <span
-          class="inline-block pt-3 w-12 h-12 text-xl rounded-full text-center bg-blue-400 text-white"
+      <div class="flex md:block">
+        <span class="numbering pt-3 w-12 h-12 text-xl rounded-full bg-blue-400"
           >1</span
         >
-        <p class="mt-5">Learn from Africa’s most successful Entrepreneurs</p>
+        <p class="ml-4 md:mt-5 md:ml-0">
+          Learn from Africa’s most successful Entrepreneurs
+        </p>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.numbering {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  @apply text-white text-center;
+}
+</style>

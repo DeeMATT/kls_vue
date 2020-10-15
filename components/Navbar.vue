@@ -24,7 +24,7 @@
           </button>
         </div>
         <div :class="{ hidden: !open }" class="menu-group">
-          <div class="mx-auto">
+          <div class="mx-auto" @click="toggleMenu">
             <nuxt-link
               to="/courses"
               class="menu-item mt-4 block lg:inline-block lg:mt-0"

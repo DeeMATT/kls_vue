@@ -24,27 +24,27 @@ html {
 }
 
 h1 {
-  @apply text-5xl; /* 48px */ /* text-2xl sm:text-4xl md:text-5xl */
+  @apply text-3xl;
 }
 
 h2 {
-  @apply text-4xl; /* 36px */
+  @apply text-4xl;
 }
 
 h3 {
-  @apply text-3xl; /* 30px */
+  @apply text-3xl;
 }
 
 h4 {
-  @apply text-2xl; /* 24px */
+  @apply text-2xl;
 }
 
 h5 {
-  @apply text-xl; /* 20px */
+  @apply text-base;
 }
 
 h6 {
-  @apply text-lg; /* 18px */
+  @apply text-sm;
 }
 
 .lead {
@@ -107,8 +107,8 @@ input[type="date"] {
 }
 
 .btn {
-  @apply text-sm font-semibold rounded-lg;
   padding: 13.5px 36px;
+  @apply text-sm font-semibold rounded-lg;
 }
 
 .btn:hover, .btn:focus {
@@ -127,8 +127,9 @@ input[type="date"] {
   display: inline-block;
   background: url('/actions/arrow-right.svg');
   background-repeat: no-repeat;
-  background-position: right 0 top 3px;
+  background-position: right 0 top 1px;
   padding: 0 20px 0 0;
+  @apply text-xs;
 }
 .view-more.light {
   background-image: url('/actions/arrow-right-light.svg');
@@ -200,4 +201,38 @@ label.checkbox span.checkmark:after {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+@media (min-width: 640px) { /* sm: 640px */
+}
+
+@media (min-width: 768px) { /* md: 768px */
+  h1 { @apply text-4xl; } /* 48px */
+  h2 { @apply text-4xl; } /* 36px */
+  h3 { @apply text-3xl; } /* 30px */
+  h4 { @apply text-2xl; } /* 24px */
+  h5 { @apply text-xl; } /* 20px */
+  h6 { @apply text-lg; } /* 18px */
+  .view-more {
+    background-position: right 0 top 3px;
+    @apply text-sm;
+  }
+}
+
+@media (min-width: 1024px) { /* lg: 1024px */
+  h1 { @apply text-5xl; } /* 48px */
+  h2 { @apply text-4xl; } /* 36px */
+  h3 { @apply text-3xl; } /* 30px */
+  h4 { @apply text-2xl; } /* 24px */
+  h5 { @apply text-xl; } /* 20px */
+  h6 { @apply text-lg; } /* 18px */
+}
+
+@media (min-width: 1280px) { /* xl: 1280px */
+  h1 { @apply text-5xl; } /* 48px */
+  h2 { @apply text-4xl; } /* 36px */
+  h3 { @apply text-3xl; } /* 30px */
+  h4 { @apply text-2xl; } /* 24px */
+  h5 { @apply text-xl; } /* 20px */
+  h6 { @apply text-lg; } /* 18px */
 }
