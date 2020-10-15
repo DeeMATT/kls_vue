@@ -97,7 +97,7 @@ export default {
 
 <style scoped>
 .title {
-  @apply flex-grow text-xl font-semibold text-gray-600;
+  @apply flex-grow font-semibold text-gray-600;
 }
 .sub-title {
   @apply text-gray-800 text-sm font-semibold;

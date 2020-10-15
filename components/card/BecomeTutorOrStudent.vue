@@ -7,11 +7,11 @@
       class="hidden md:inline-block absolute -mt-32 -mr-40 right-0"
     />
     <div class="grid md:grid-cols-2 gap-6">
-      <div class="md:grid md:grid-cols-12 gap-4 mb-10 md:mb-0">
-        <div class="col-span-5 pb-5">
-          <h4 class="text-4xl font-bold" style="line-height: 120%">
-            Become a <br />tutor
-          </h4>
+      <div class="md:grid md:grid-cols-12 gap-4 mb-8 md:mb-0">
+        <div class="col-span-5">
+          <h2 class="text-2xl md:text-4xl font-bold pb-5 leading-tight">
+            Become a <br class="hidden md:inline-block" />tutor
+          </h2>
         </div>
         <div class="col-span-5 pb-5">
           <p class="text-md pb-5 md:pb-2 mt-2">
@@ -24,11 +24,12 @@
           >
         </div>
       </div>
+      <hr class="md:hidden mb-2" />
       <div class="md:grid md:grid-cols-12 gap-4">
         <div class="col-span-5">
-          <h4 class="text-4xl font-bold pb-5" style="line-height: 120%">
+          <h2 class="text-2xl md:text-4xl font-bold pb-5 leading-tight">
             Become a student
-          </h4>
+          </h2>
         </div>
         <div class="col-span-6 pb-5">
           <p class="text-md pb-5 md:pb-2 mt-2">

@@ -4,13 +4,14 @@
       <div class="container mx-auto">
         <div class="grid grid-cols-12">
           <div class="col-span-12 md:col-span-6 px-4 lg:px-0">
-            <h2 class="title font-bold md:mt-20 mt-10">
-              Webinars and courses to up your game 🚀🚀
-            </h2>
-            <p class="text-md md:text-xl mt-10 mb-8" style="line-height: unset">
+            <h1 class="font-bold leading-tight md:mt-20 mt-10 lg:-mr-8">
+              <!-- Webinars and courses to up your game 🚀🚀 -->
+              Relevant knowledge to start earning immediately
+            </h1>
+            <h5 class="mt-10 mb-8 leading-normal">
               Get relevant and practicable knowledge to kick start your
               business, upskill your career or increase your income.
-            </p>
+            </h5>
             <search-box />
             <div class="mt-8 mb-6 lg:mb-40">
               <span class="text-xs text-gray-700 block mb-4"
@@ -30,7 +31,7 @@
     <section class="bg-white">
       <div class="container mx-auto mt-16 mb-24 px-4 lg:px-0">
         <items-section-group title="Top Categories">
-          <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-5">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
             <category-item
               v-for="(category, key) in topCategories"
               :key="key"
@@ -45,11 +46,9 @@
       <div class="container mx-auto my-16 px-4 lg:px-0">
         <div class="grid grid-cols-2 gap-5">
           <div class="col-span-2">
-            <h2
-              class="text-2xl md:text-3xl lg:text-5xl leading-8 font-bold text-center mb-8"
-            >
+            <h1 class="leading-none text-gray-700 font-bold text-center mb-8">
               On Klasroom, you can...
-            </h2>
+            </h1>
           </div>
           <div class="col-span-2 md:col-span-1">
             <icon-card-lg
@@ -108,7 +107,7 @@
     <section class="bg-white">
       <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Latest Courses" more="/courses/latest">
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <course-item
               v-for="(course, key) in latestCourses"
               :key="key"
@@ -128,7 +127,7 @@
     <section class="bg-white">
       <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Trending" more="/trending">
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5">
             <course-item
               v-for="(course, key) in latestCourses"
               :key="key"
@@ -145,7 +144,7 @@
       </div>
     </section>
 
-    <section class="bg-white">
+    <section class="bg-white hidden md:block">
       <div class="container mx-auto my-16">
         <webinars-calendar />
       </div>
@@ -181,7 +180,7 @@
     <section class="bg-white">
       <div class="container mx-auto my-16 px-4 lg:px-0">
         <items-section-group title="Latest Webinars" more="/webinars/latest">
-          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
             <webinar-item
               v-for="(webinar, key) in latestWebinars"
               :key="key"

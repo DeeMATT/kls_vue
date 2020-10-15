@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-center px-12 md:px-6">
     <img
       src="/logo-gray.svg"
       class="inline-block mb-8 sm:mb-4 w-3/6 sm:w-auto"

@@ -2,29 +2,43 @@
   <section>
     <div class="container mx-auto px-4 lg:px-0">
       <div class="grid grid-cols-12 py-12">
-        <div class="col-span-6 md:col-span-3 mb-8 md:mb-0">
+        <div class="col-span-6 md:col-span-2 mb-8 md:mb-0">
           <img src="/logo.svg" />
+          <ul class="social-follow mt-5">
+            <li class="twitter mr-2">
+              <a href="#"></a>
+            </li>
+            <li class="instagram mr-2">
+              <a href="#"></a>
+            </li>
+            <li class="whatsapp">
+              <a href="#"></a>
+            </li>
+          </ul>
         </div>
-        <div class="col-span-12 md:col-span-5">
-          <div class="grid grid-cols-12 text-sm mb-10 md:mb-0">
-            <div class="col-span-5 md:col-span-3 mb-8 md:mb-0">
-              <strong class="block font-semibold mb-3">Links</strong>
-              <ul>
-                <li><nuxt-link to="/">Courses</nuxt-link></li>
-                <li><nuxt-link to="/">Webinars</nuxt-link></li>
-                <li><nuxt-link to="/">Blogs</nuxt-link></li>
+        <div class="col-span-12 md:col-span-6">
+          <div class="grid grid-cols-12 text-sm mb-10 md:mb-0 gap-x-5">
+            <div class="col-span-6 md:col-span-4 mb-8 md:mb-0">
+              <strong class="block font-semibold mb-3">Products</strong>
+              <ul class="menu-list">
+                <li><nuxt-link to="/courses">Courses</nuxt-link></li>
+                <li><nuxt-link to="/webinars">Webinars</nuxt-link></li>
+                <li><nuxt-link to="/">Klasroom for Business</nuxt-link></li>
+                <li><nuxt-link to="/blogs">Blog</nuxt-link></li>
               </ul>
             </div>
-            <div class="col-span-7 md:col-span-5 mb-8 md:mb-0">
+            <div class="col-span-6 md:col-span-4 mb-8 md:mb-0">
               <strong class="block font-semibold mb-3">Register</strong>
-              <ul>
-                <li><nuxt-link to="/">Become an instructor</nuxt-link></li>
+              <ul class="menu-list">
+                <li>
+                  <nuxt-link to="/courses">Become an instructor</nuxt-link>
+                </li>
                 <li><nuxt-link to="/">Become a student</nuxt-link></li>
               </ul>
             </div>
             <div class="col-span-12 md:col-span-4">
               <strong class="block font-semibold mb-3">Resources</strong>
-              <ul>
+              <ul class="menu-list">
                 <li><nuxt-link to="/">Privacy Policy</nuxt-link></li>
               </ul>
             </div>
@@ -43,8 +57,8 @@
         </div>
       </div>
       <div class="pb-5 text-center">
-        <hr class="mb-4" />
-        <small class="text-xs">© 2020 Klasroom . All Rights Reserved.</small>
+        <hr class="mb-4 border-gray-300" />
+        <small class="text-xs">© 2020 Klasroom. All Rights Reserved.</small>
       </div>
       <!-- <nav class="flex items-center justify-between flex-wrap py-6">
         <div class="flex items-center flex-shrink-0 mr-6">
@@ -86,7 +100,24 @@ export default {
 section {
   background-color: #fcf8f7;
 }
-li {
+.social-follow > li,
+.social-follow > li > a {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 40px;
+  height: 40px;
+}
+.social-follow > li.twitter > a {
+  background-image: url('/icon/social/twitter.svg');
+}
+.social-follow > li.instagram > a {
+  background-image: url('/icon/social/instagram.svg');
+}
+.social-follow > li.whatsapp > a {
+  background-image: url('/icon/social/whatsapp.svg');
+}
+.menu-list > li {
   line-height: 30px;
 }
 </style>
