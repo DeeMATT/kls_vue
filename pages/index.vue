@@ -6,11 +6,13 @@
           <div class="col-span-12 md:col-span-6 px-4 lg:px-0">
             <h1 class="font-bold leading-tight md:mt-20 mt-10 lg:-mr-8">
               <!-- Webinars and courses to up your game 🚀🚀 -->
-              Relevant knowledge to start earning immediately
+              <!-- Relevant knowledge to start earning immediately -->
+              Learn from the masters and become one.
             </h1>
             <h5 class="mt-10 mb-8 leading-normal">
-              Get relevant and practicable knowledge to kick start your
-              business, upskill your career or increase your income.
+              Build your business with practical knowledge from Africa’s most
+              successful entrepreneurs. Gain insights to industry secrets and
+              strategies for building successful businesses in Africa.
             </h5>
             <search-box />
             <div class="mt-8 mb-6 lg:mb-40">
@@ -54,9 +56,9 @@
             <icon-card-lg
               icon="/card/course-find-icon.svg"
               title="Take Courses"
-              :desc="`Select from a broad range of available courses and start 
-                learning right away. These courses are taught by professionals 
-                with extensive knowledge and experience.`"
+              :desc="`Start learning from a wide range of courses from your 
+                favorite entrepreneurs. Learn at your own pace and earn a 
+                certificate at completion.`"
               link-url="/courses"
               link-text="Find a course"
             />
@@ -67,11 +69,11 @@
               bg="bg-blue-400"
               icon="/card/webinar-find-icon.svg"
               title="Attend Webinars"
-              :desc="`Select from a broad range of available courses and start 
-                learning right away. These courses are taught by professionals 
-                with extensive knowledge and experience.`"
+              :desc="`Missed a class or interested in one? Attend webinars 
+                led by industry experts on Klasroom. Make your reservations 
+                to secure a spot.`"
               link-url="/webinars"
-              link-text="Find a webinar"
+              link-text="Attend webinar"
             />
           </div>
           <div class="col-span-2 md:col-span-1">
@@ -80,9 +82,10 @@
               bg="bg-blue-600"
               icon="/card/course-create-icon.svg"
               title="Create &amp; Sell Courses"
-              :desc="`Select from a broad range of available courses and start 
-                learning right away. These courses are taught by professionals 
-                with extensive knowledge and experience.`"
+              :desc="`Are you a tutor with wealth of knowledge and experience? 
+                Klasroom is the platform for you to reach thousands of 
+                learners and earn maximally. Create and sell your 
+                pre-recorded courses here.`"
               link-url="/account/courses/create"
               link-text="Create a course"
             />
@@ -93,9 +96,8 @@
               bg="bg-blue-800"
               icon="/card/webinar-create-icon.svg"
               title="Host &amp; Sell Webinars"
-              :desc="`Select from a broad range of available courses and start 
-                learning right away. These courses are taught by professionals 
-                with extensive knowledge and experience.`"
+              :desc="`Create or host well-loved webinars on Klasroom to a wide 
+                variety of audience and expand your stream of income.`"
               link-url="/account/webinars/create"
               link-text="Create a webinar"
             />

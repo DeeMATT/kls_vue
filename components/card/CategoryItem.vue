@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-lg border border-gray-300 shadow-hover relative">
-    <div class="p-4 md:p-5 lg:p-6 pb-16 md:pb-20">
+    <div class="p-4 md:p-5 lg:p-6 pb-16 md:pb-18 lg:pb-20">
       <span
         class="hidden md:inline-block bg-gray-200 w-16 h-16 rounded-lg"
       ></span>

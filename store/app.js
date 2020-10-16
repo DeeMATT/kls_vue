@@ -1,6 +1,7 @@
 // state
 export const state = () => ({
   menu: false,
+  loginModal: false,
   darkMenu: false,
   redirectUrl: null,
   pageTitle: 'Dashboard',
@@ -38,6 +39,9 @@ export const mutations = {
   },
   SET_DARK_MENU(state, status) {
     state.darkMenu = status
+  },
+  LOGIN_MODAL(state, status) {
+    state.loginModal = status
   },
   SET_TYPE(state, type) {
     state.pageType = type

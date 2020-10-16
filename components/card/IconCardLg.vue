@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-lg p-6 sm:p-8 md:p-16" :class="bg">
+  <div class="rounded-lg p-6 sm:p-8 md:p-16 min-h-full" :class="bg">
     <img
       v-if="icon"
       :src="icon"
