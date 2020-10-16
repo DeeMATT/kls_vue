@@ -51,12 +51,12 @@
             </nuxt-link>
           </div>
           <div class="mt-8 md:mt-0 mb-6 md:mb-0">
-            <router-link
-              to="/login"
+            <a
+              href="#"
               class="btn lg:mr-4 bg-blue-400 text-white md:text-black md:bg-transparent block md:inline-block mb-5 md:mb-0"
             >
               Log In
-            </router-link>
+            </a>
             <router-link
               to="/signup"
               class="btn btn-primary lg:mt-0 block md:inline-block"

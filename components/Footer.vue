@@ -80,6 +80,7 @@
         </div>
       </nav> -->
     </div>
+    <login-modal />
   </section>
 </template>
 

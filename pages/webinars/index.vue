@@ -15,8 +15,7 @@
           </div>
           <div class="col-span-2 md:col-span-1">
             <h5 class="mb-8 leading-normal">
-              Learn from many experts and acquire knowledge that will put you in
-              the top 3% of your field. Start your journey now.
+              Learn from seasoned and experienced experts.
             </h5>
             <button class="btn btn-primary">Create Webinar</button>
           </div>
