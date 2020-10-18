@@ -1,8 +1,11 @@
 // state
 export const state = () => ({
   menu: false,
-  loginModal: false,
   darkMenu: false,
+  loginModal: false,
+  forgotPasswordModal: false,
+  resetPasswordModal: false,
+  noticeModal: null,
   redirectUrl: null,
   pageTitle: 'Dashboard',
   pageType: null,
@@ -42,6 +45,15 @@ export const mutations = {
   },
   LOGIN_MODAL(state, status) {
     state.loginModal = status
+  },
+  FORGOT_PASSWORD_MODAL(state, status) {
+    state.forgotPasswordModal = status
+  },
+  RESET_PASSWORD_MODAL(state, status) {
+    state.resetPasswordModal = status
+  },
+  NOTICE_MODAL(state, options) {
+    state.noticeModal = options
   },
   SET_TYPE(state, type) {
     state.pageType = type

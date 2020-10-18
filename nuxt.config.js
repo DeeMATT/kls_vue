@@ -35,6 +35,7 @@ export default {
     '~plugins/vform',
     '~plugins/axios',
     '~plugins/vue2-filters',
+    { src: '~plugins/validate', mode: 'client' },
     { src: '~plugins/datepicker', mode: 'client' },
   ],
   /*
@@ -56,11 +57,13 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
+    '@nuxtjs/device',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    'nuxt-sweetalert2',
   ],
   /*
    ** Axios module configuration
