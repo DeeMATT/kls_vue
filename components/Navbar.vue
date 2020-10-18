@@ -54,14 +54,17 @@
             <a
               href="#"
               class="btn lg:mr-4 bg-blue-400 text-white md:text-black md:bg-transparent block md:inline-block mb-5 md:mb-0"
+              @click="toggleLogin"
             >
               Log In
             </a>
-            <router-link
-              to="/signup"
+            <a
+              href="#"
               class="btn btn-primary lg:mt-0 block md:inline-block"
-              >Sign Up</router-link
+              @click="toggleRegister"
             >
+              Sign Up
+            </a>
           </div>
         </div>
       </nav>
@@ -83,6 +86,16 @@ export default {
   methods: {
     toggleMenu() {
       this.open = !this.open
+    },
+    toggleLogin(e) {
+      if (e) e.preventDefault()
+      this.open = false
+      this.$store.commit('app/LOGIN_MODAL', 'login')
+    },
+    toggleRegister(e) {
+      if (e) e.preventDefault()
+      this.open = false
+      this.$store.commit('app/LOGIN_MODAL', 'register')
     },
   },
 }

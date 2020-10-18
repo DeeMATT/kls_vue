@@ -3,9 +3,9 @@
     Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
     Read the documentation to get started: https://tailwindui.com/documentation
   -->
-  <div v-if="showLogin" class="fixed z-10 inset-0 overflow-y-auto">
+  <div v-if="show" class="fixed z-10 inset-0 overflow-y-auto">
     <div
-      class="flex items-start justify-center min-h-screen pt-4 px-4 pb-4 lg:pb-20 text-center sm:block sm:p-0"
+      class="flex items-start justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
     >
       <!--
         Background overlay, show/hide based on modal state.
@@ -48,7 +48,7 @@
             <button
               aria-label="Close panel"
               class="text-gray-700 hover:text-gray-500 focus:outline-none transition ease-in-out duration-150"
-              @click="$store.commit('app/LOGIN_MODAL', false)"
+              @click="$store.commit('app/RESET_PASSWORD_MODAL', false)"
             >
               <!-- Heroicon name: x -->
               <svg
@@ -67,100 +67,51 @@
               </svg>
             </button>
           </div>
-          <toggle-switch v-model="isLogin" class="mb-6" />
           <div class="block">
-            <div class="mt-3 sm:mt-0 sm:ml-0">
+            <div class="mt-3 sm:mt-5 sm:ml-0">
               <h2
                 id="modal-headline"
                 class="text-xl sm:text-4xl leading-none font-bold text-center text-gray-800"
               >
-                {{
-                  isLogin
-                    ? 'Sign into your account'
-                    : 'Create a student account'
-                }}
+                Reset password
               </h2>
               <hr class="mt-8 mb-5" />
-              <!-- Login form -->
-              <form v-if="isLogin" id="login-form">
+              <!-- Forgot password form -->
+              <form id="forgot-form">
                 <div class="form-group mb-5">
-                  <label for="input-email">Email address</label>
+                  <label for="input-code">Enter Code</label>
                   <div>
                     <input
-                      id="input-email"
+                      id="input-code"
                       class="form-input"
-                      placeholder="Enter your email here"
+                      placeholder="Enter code that was sent to your email"
                     />
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="input-password">Password</label>
+                <div class="form-group mb-5">
+                  <label for="input-password">New Password</label>
                   <div>
                     <input
                       id="input-password"
                       class="form-input"
                       placeholder="Enter your password here"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="input-re_password">New Password</label>
+                  <div>
+                    <input
+                      id="input-re_password"
+                      class="form-input"
+                      placeholder="Repeat password"
                     />
                   </div>
                 </div>
                 <div class="flex text-center pt-8 pb-4 sm:pb-4">
                   <span class="flex mx-auto">
                     <button type="button" class="btn btn-primary shadow">
-                      Sign in
-                    </button>
-                  </span>
-                </div>
-                <hr class="mt-4 mb-4" />
-                <div class="text-center">
-                  <a
-                    href="#"
-                    class="text-sm leading-5 text-gray-700"
-                    @click="forgotPassword"
-                  >
-                    Forgot password?
-                  </a>
-                </div>
-              </form>
-              <!-- Sign up form -->
-              <form v-else id="signup-form">
-                <div class="form-group mb-5">
-                  <label for="input-name">Name</label>
-                  <div>
-                    <input
-                      id="input-name"
-                      class="form-input"
-                      placeholder="Enter your name here"
-                    />
-                  </div>
-                </div>
-                <div class="form-group mb-5">
-                  <label for="input-email">Email address</label>
-                  <div>
-                    <input
-                      id="input-email"
-                      class="form-input"
-                      placeholder="Enter your email here"
-                    />
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="input-password">Password</label>
-                  <div>
-                    <input
-                      id="input-password"
-                      class="form-input"
-                      placeholder="Enter your password here"
-                    />
-                  </div>
-                </div>
-                <div class="flex text-center pt-8 pb-4 sm:pb-4">
-                  <span class="flex mx-auto">
-                    <button
-                      type="button"
-                      class="btn btn-primary shadow"
-                      @click="showSuccess"
-                    >
-                      Sign up
+                      Set new password
                     </button>
                   </span>
                 </div>
@@ -179,37 +130,20 @@ import { mapState } from 'vuex'
 
 export default {
   data: () => ({
-    isLogin: true,
+    form: {
+      email: '',
+    },
   }),
   computed: {
     ...mapState({
-      showLogin: (state) => state.app.loginModal,
+      show: (state) => state.app.resetPasswordModal,
     }),
   },
-  watch: {
-    showLogin: {
-      handler(value) {
-        // console.log('showLogin', value)
-        if (value) this.isLogin = value !== 'register'
-      },
-      immediate: true,
-    },
-  },
   methods: {
-    forgotPassword(e) {
+    proceed(e) {
       if (e) e.preventDefault()
-      this.$store.commit('app/FORGOT_PASSWORD_MODAL', true)
-      this.$store.commit('app/LOGIN_MODAL', false)
-    },
-    showSuccess(e) {
-      if (e) e.preventDefault()
-      this.$store.commit('app/NOTICE_MODAL', {
-        title: 'All done!',
-        text: `You have successfully signed up to klasroom.com. 
-          Please check your email and click the link in it to 
-          complete your registration.`,
-      })
-      this.$store.commit('app/LOGIN_MODAL', false)
+      this.$store.commit('app/RESET_PASSWORD_MODAL', true)
+      this.$store.commit('app/FORGOT_PASSWORD_MODAL', false)
     },
   },
 }

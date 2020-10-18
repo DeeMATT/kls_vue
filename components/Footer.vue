@@ -81,6 +81,9 @@
       </nav> -->
     </div>
     <login-modal />
+    <forgot-password-modal />
+    <reset-password-modal />
+    <notice-modal />
   </section>
 </template>
 

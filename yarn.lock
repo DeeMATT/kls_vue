@@ -1555,6 +1555,11 @@
     consola "^2.15.0"
     defu "^3.1.0"
 
+"@nuxtjs/device@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/device/-/device-1.2.7.tgz#ccb6f33b1eed0c7725ab8668526da92534624154"
+  integrity sha512-Vyhw2ZSaUigFtRed5DjscV9jKevenvgFD5527rVAUzpSUQTcLau8NN+Zdf463bUr5xLwCDl7wUA4+1rGROmA5w==
+
 "@nuxtjs/eslint-config-typescript@^3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config-typescript/-/eslint-config-typescript-3.0.0.tgz#4c307ba1d7038d3d4a6aa40ebd4e0bd80a9af512"
@@ -7649,6 +7654,14 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+libphonenumber-js@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/libphonenumber-js/-/libphonenumber-js-1.8.4.tgz#e84eaa25b96bfebb2ac1a5c847b7f7f17da5bd59"
+  integrity sha512-s0fTPZRB4hcsfDL9p6wUNOLngVh4y3fBPhH33dL7OfkHA2RirI8p3rlR+4f4SMxdcng9jPNOweS2Z47BivHMYw==
+  dependencies:
+    minimist "^1.2.5"
+    xml2js "^0.4.17"
+
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
@@ -8576,6 +8589,13 @@ num2fraction@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/num2fraction/-/num2fraction-1.2.2.tgz#6f682b6a027a4e9ddfa4564cd2589d1d4e669ede"
   integrity sha1-b2gragJ6Tp3fpFZM0lidHU5mnt4=
+
+nuxt-sweetalert2@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/nuxt-sweetalert2/-/nuxt-sweetalert2-1.0.0.tgz#cbfd10d6ca7c4a2b6e11e79a1987fb4849c749b4"
+  integrity sha512-1BZlV2ddCj2LROmPcgkRV/K9O8+pVD/Z5sisbvhSiBDl6ynepfKDfWypo2P5EOirxst1H40EfkxyFuIKuqAY9g==
+  dependencies:
+    sweetalert2 "7.x"
 
 nuxt@^2.14.6:
   version "2.14.6"
@@ -11653,6 +11673,11 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
+sweetalert2@7.x:
+  version "7.33.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-7.33.1.tgz#7e3534d2c2962f875f419cfea5d75ee526d65cd4"
+  integrity sha512-69KYtyhtxejFG0HDb8aVhAwbpAWPSTZwaL5vxDHgojErD2KeFxTmRgmkbiLtMC8UdTFXRmvTPtZTF4459MUb7w==
+
 sweetalert2@^10.4.0:
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-10.4.0.tgz#65ff66110e720e52a6c1725ff339eec11b69b740"
@@ -12440,6 +12465,11 @@ vary@^1.1.2, vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
+vee-validate@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-3.4.2.tgz#888a900ae845e1e02ad5f8ee688b41408e3892db"
+  integrity sha512-ORDhNuFsMZaRatPBsuLX98nPG+xtDAkJ/JBnRNTxgqWl7y6qCT6VTLKAYhTvvBOVu+KnINUvg4+x/54rjZZ9sA==
+
 vendors@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/vendors/-/vendors-1.0.4.tgz#e2b800a53e7a29b93506c3cf41100d16c4c4ad8e"
@@ -12936,7 +12966,7 @@ xml-name-validator@^3.0.0:
   resolved "https://registry.yarnpkg.com/xml-name-validator/-/xml-name-validator-3.0.0.tgz#6ae73e06de4d8c6e47f9fb181f78d648ad457c6a"
   integrity sha512-A5CUptxDsvxKJEU3yO6DuWBSJz/qizqzJKOMIfUJHETbBw/sFaDxgd6fxm1ewUaM0jZ444Fc5vC5ROYurg/4Pw==
 
-xml2js@^0.4.23:
+xml2js@^0.4.17, xml2js@^0.4.23:
   version "0.4.23"
   resolved "https://registry.yarnpkg.com/xml2js/-/xml2js-0.4.23.tgz#a0c69516752421eb2ac758ee4d4ccf58843eac66"
   integrity sha512-ySPiMjM0+pLDftHgXY4By0uswI3SPKLDw/i3UXbnO8M/p28zqexCUoPmQFrYD+/1BzhGJSs2i1ERWKJAtiLrug==
