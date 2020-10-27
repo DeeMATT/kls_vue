@@ -3,10 +3,10 @@
   <div class="flex">
     <div class="toggle-wrapper">
       <div :class="!value ? 'active' : 'inactive'" @click="updateValue(false)">
-        Sign up
+        {{ active }}
       </div>
       <div :class="value ? 'active' : 'inactive'" @click="updateValue(true)">
-        Sign in
+        {{ inactive }}
       </div>
     </div>
   </div>
@@ -15,6 +15,8 @@
 <script>
 export default {
   props: {
+    active: { type: String, required: true },
+    inactive: { type: String, required: true },
     value: { type: Boolean, default: false },
   },
   methods: {

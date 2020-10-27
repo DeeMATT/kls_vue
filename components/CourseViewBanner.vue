@@ -18,7 +18,7 @@
       <div class="flex mb-10 md:mb-16">
         <img src="/avatar.jpg" class="rounded-full mr-3 w-8 h-8" />
         <span class="text-xs text-gray-700 block my-auto"> Joy Adeleke</span>
-        <ul class="social-icons my-auto">
+        <ul class="social-icons with-avatar my-auto">
           <li class="twitter">
             <a href="#"></a>
           </li>
@@ -57,24 +57,4 @@
   background-size: cover;
   @apply bg-gray-200 overflow-hidden rounded-lg;
 }
-
-.social-icons,
-.social-icons > li {
-  display: inline-flex;
-  height: 20px;
-  margin-left: 10px;
-}
-.social-icons > li > a {
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-.social-icons > li.twitter > a {
-  background-image: url('/icon/social/twitter.svg');
-}
-.social-icons > li.share > a {
-  background-image: url('/icon/social/share.svg');
-}
-
 </style>

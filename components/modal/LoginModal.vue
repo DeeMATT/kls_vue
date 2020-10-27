@@ -67,7 +67,12 @@
               </svg>
             </button>
           </div>
-          <toggle-switch v-model="isLogin" class="mb-6" />
+          <toggle-switch
+            v-model="isLogin"
+            active="Sign up"
+            inactive="Sign in"
+            class="mb-6"
+          />
           <div class="block">
             <div class="mt-3 sm:mt-0 sm:ml-0">
               <h2

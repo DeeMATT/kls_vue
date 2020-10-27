@@ -83,6 +83,7 @@
     <login-modal />
     <forgot-password-modal />
     <reset-password-modal />
+    <purchase-modal />
     <notice-modal />
   </section>
 </template>

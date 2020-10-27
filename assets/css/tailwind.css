@@ -203,6 +203,25 @@ label.checkbox span.checkmark:after {
   transform: rotate(45deg);
 }
 
+.social-icons,
+.social-icons > li {
+  display: inline-flex;
+  height: 20px;
+  margin-left: 10px;
+}
+.social-icons > li > a {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.social-icons > li.twitter > a {
+  background-image: url('/icon/social/twitter.svg');
+}
+.social-icons > li.share > a {
+  background-image: url('/icon/social/share.svg');
+}
+
 /* Form input */
 
 .form-group {}

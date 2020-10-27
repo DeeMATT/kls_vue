@@ -5,12 +5,13 @@ export const state = () => ({
   loginModal: false,
   forgotPasswordModal: false,
   resetPasswordModal: false,
+  modal: false,
   noticeModal: null,
   redirectUrl: null,
   pageTitle: 'Dashboard',
   pageType: null,
   pageData: null,
-  pageViewData: {},
+  viewData: {},
   categories: [],
   customer_details: null,
   banks: [],
@@ -23,7 +24,7 @@ export const getters = {
   pageTitle: (state) => state.pageTitle,
   pageType: (state) => state.pageType,
   pageData: (state) => state.pageData,
-  pageViewData: (state) => state.pageViewData,
+  viewData: (state) => state.viewData,
   categories: (state) => state.categories,
   banks: (state) => state.banks,
   accounts: (state) => state.accounts,
@@ -52,6 +53,9 @@ export const mutations = {
   RESET_PASSWORD_MODAL(state, status) {
     state.resetPasswordModal = status
   },
+  SET_MODAL(state, status) {
+    state.modal = status
+  },
   NOTICE_MODAL(state, options) {
     state.noticeModal = options
   },
@@ -62,7 +66,7 @@ export const mutations = {
     state.pageData = data
   },
   SET_VIEW_DATA(state, data) {
-    state.pageViewData = data
+    state.viewData = data
   },
   SET_CATEGORIES(state, data) {
     state.categories = data
