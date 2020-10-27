@@ -99,7 +99,10 @@
                 />
               </div>
               <div class="text-center">
-                <button class="btn btn-primary shadow">
+                <button
+                  class="btn btn-primary shadow"
+                  @click.prevent="purchaseCourse"
+                >
                   Purchase and Start Course
                 </button>
               </div>
@@ -176,6 +179,18 @@ export default {
     youLearn,
     reviews,
   }),
+  methods: {
+    purchaseCourse() {
+      this.$store.commit('app/SET_MODAL', 'purchase-modal')
+      this.$store.commit('app/SET_VIEW_DATA', {
+        type: 'Course',
+        title: 'How to Build Multiple Sources of Income',
+        desc: `Learn how to build and manage multiple sources of 
+          income that leads to sustainable wealth`,
+        price: 2500,
+      })
+    },
+  },
 }
 </script>
 

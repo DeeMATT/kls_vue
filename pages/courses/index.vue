@@ -18,7 +18,9 @@
               Learn from many experts and acquire knowledge that will put you in
               the top 3% of your field. Start your journey now.
             </h5>
-            <button class="btn btn-primary">Gain Full Access</button>
+            <button class="btn btn-primary" @click.prevent="purchaseCourse">
+              Gain Full Access
+            </button>
           </div>
         </div>
       </div>
@@ -73,5 +75,17 @@ export default {
     ],
     courses,
   }),
+  methods: {
+    purchaseCourse() {
+      this.$store.commit('app/SET_MODAL', 'purchase-modal')
+      this.$store.commit('app/SET_VIEW_DATA', {
+        type: 'Course',
+        title: 'How to Build Multiple Sources of Income',
+        desc: `Learn how to build and manage multiple sources of 
+          income that leads to sustainable wealth`,
+        price: 2500,
+      })
+    },
+  },
 }
 </script>

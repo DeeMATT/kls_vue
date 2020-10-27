@@ -110,7 +110,11 @@
                 </div>
                 <div class="flex text-center pt-8 pb-4 sm:pb-4">
                   <span class="flex mx-auto">
-                    <button type="button" class="btn btn-primary shadow">
+                    <button
+                      type="button"
+                      class="btn btn-primary shadow"
+                      @click="proceed"
+                    >
                       Set new password
                     </button>
                   </span>
@@ -142,8 +146,12 @@ export default {
   methods: {
     proceed(e) {
       if (e) e.preventDefault()
-      this.$store.commit('app/RESET_PASSWORD_MODAL', true)
-      this.$store.commit('app/FORGOT_PASSWORD_MODAL', false)
+      this.$store.commit('app/NOTICE_MODAL', {
+        title: 'Congratulations!',
+        html: `Your password has been changed successfully. 
+          Please log in to your account to proceed.`,
+      })
+      this.$store.commit('app/RESET_PASSWORD_MODAL', false)
     },
   },
 }
