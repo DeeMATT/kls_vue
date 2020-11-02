@@ -19,9 +19,9 @@
           </p>
         </div>
         <div class="col-span-12">
-          <nuxt-link to="/" class="btn btn-primary"
-            >Create tutor account now</nuxt-link
-          >
+          <button class="btn btn-primary" @click.prevent="toggleRegister">
+            Create tutor account now
+          </button>
         </div>
       </div>
       <hr class="md:hidden mb-2" />
@@ -37,9 +37,9 @@
           </p>
         </div>
         <div class="col-span-12">
-          <nuxt-link to="/" class="btn btn-primary"
-            >Create student account now</nuxt-link
-          >
+          <button class="btn btn-primary" @click.prevent="toggleRegister">
+            Create student account now
+          </button>
         </div>
       </div>
     </div>
@@ -49,6 +49,18 @@
     />
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleRegister(e) {
+      if (e) e.preventDefault()
+      this.open = false
+      this.$store.commit('app/LOGIN_MODAL', 'register')
+    },
+  },
+}
+</script>
 
 <style scoped>
 li {
