@@ -157,7 +157,7 @@
                 </div>
               </form>
               <!-- Sign up form -->
-              <form v-else id="signup-form">
+              <form v-else id="signup-form" @submit.prevent="">
                 <div class="form-group mb-5">
                   <label for="input-name">Full name</label>
                   <div>
@@ -207,13 +207,19 @@
                 </p>
                 <div class="flex text-center pt-8 pb-4 sm:pb-4">
                   <span class="flex mx-auto">
-                    <button
-                      type="button"
-                      class="btn btn-primary shadow"
-                      @click="showSuccess"
+                    <paystack
+                      :amount="viewData.price * 100"
+                      name="Peter Odetayo"
+                      email="peterodet@gmail.com"
+                      paystackkey="pk_test_7d2a22c90ef584478796022f307ae5e1460bb604"
+                      :reference="paymentReference"
+                      :callback="processPayment"
+                      :close="close"
                     >
-                      Sign Up and Pay {{ viewData.price | currency('₦', 0) }}
-                    </button>
+                      <button type="button" class="btn btn-primary shadow">
+                        Sign Up and Pay {{ viewData.price | currency('₦', 0) }}
+                      </button>
+                    </paystack>
                   </span>
                 </div>
               </form>
@@ -228,6 +234,7 @@
 
 <script>
 import { mapState } from 'vuex'
+import { reference } from '~/utils/index'
 
 export default {
   data: () => ({
@@ -238,6 +245,9 @@ export default {
       show: (state) => state.app.modal === 'purchase-modal',
       viewData: (state) => state.app.viewData,
     }),
+    paymentReference() {
+      return reference()
+    },
   },
   methods: {
     forgotPassword(e) {
@@ -245,15 +255,18 @@ export default {
       this.$store.commit('app/FORGOT_PASSWORD_MODAL', true)
       this.$store.commit('app/SET_MODAL', false)
     },
-    showSuccess(e) {
-      if (e) e.preventDefault()
+    processPayment(e) {
+      console.log(e, 'paystack callback')
       this.$store.commit('app/NOTICE_MODAL', {
         title: 'All done!',
         text: `You have successfully signed up to klasroom.com. 
           Please check your email and click the link in it to 
           complete your registration.`,
       })
-      this.$store.commit('app/LOGIN_MODAL', false)
+      this.$store.commit('app/SET_MODAL', false)
+    },
+    close() {
+      console.log('Paystack closed')
     },
   },
 }

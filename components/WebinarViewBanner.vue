@@ -12,7 +12,7 @@
           <p class="font-semibold text-sm text-white">
             This webinar will start in
           </p>
-          <div class="countdown-timer mt-4">
+          <div class="countdown-timer text-white mt-4">
             <span>2</span>
             days
             <span>14</span>
@@ -98,5 +98,11 @@ export default {
   display: inline-flex;
   height: 20px;
   margin-left: 10px;
+}
+.countdown-timer {
+  @apply text-xs text-white font-semibold;
+}
+.countdown-timer > span {
+  @apply text-xl font-extrabold inline-block px-1;
 }
 </style>

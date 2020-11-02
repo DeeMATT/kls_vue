@@ -2,7 +2,10 @@
   <div class="grid lg:grid-cols-12 gap-10">
     <div class="col-span-12 lg:col-span-5 px-4 lg:px-0 hidden md:block">
       <div class="banner-card flex px-12 py-40">
-        <button class="btn btn-primary mx-auto my-auto">
+        <button
+          class="btn btn-primary mx-auto my-auto"
+          @click.prevent="purchaseCourse"
+        >
           Gain Full Access
         </button>
       </div>
@@ -48,6 +51,23 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    purchaseCourse() {
+      this.$store.commit('app/SET_MODAL', 'purchase-modal')
+      this.$store.commit('app/SET_VIEW_DATA', {
+        type: 'Course',
+        title: 'How to Build Multiple Sources of Income',
+        desc: `Learn how to build and manage multiple sources of 
+          income that leads to sustainable wealth`,
+        price: 2500,
+      })
+    },
+  },
+}
+</script>
 
 <style scoped>
 .banner-card {
