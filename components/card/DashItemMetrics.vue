@@ -14,9 +14,7 @@
             to="/student/dashboard/undone-tasks"
             class="text-gray-700 inline-block my-3"
           >
-            <span class="text-sm">{{
-              Number(total) > 3 ? `See ${Number(total) - 3} more` : 'See more'
-            }}</span>
+            <span class="text-sm">See more</span>
           </nuxt-link>
         </div>
       </div>
@@ -28,7 +26,7 @@
 export default {
   props: {
     title: { type: Number, required: true },
-    label: { type: Array, required: true },
+    label: { type: String, required: true },
     more: { type: String, default: null },
   },
 }
