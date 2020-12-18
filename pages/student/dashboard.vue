@@ -1,0 +1,135 @@
+<template>
+  <div class="min-h-screen mb-24">
+    <section class="bg-orange-100">
+      <div class="container mx-auto mb-10 px-4 lg:px-0">
+        <div class="grid grid-cols-3 gap-5">
+          <dash-items-status
+            title="Courses"
+            :items="courses"
+            undone="5 in progress"
+            done="3 completed"
+            more="/student/dashboard/my-courses"
+          />
+          <dash-items-status
+            title="Webinars"
+            :items="courses"
+            undone="4 upcoming"
+            done="3 attended"
+            more="/student/dashboard/my-webinars"
+          />
+          <dash-undone-tasks :items="undoneTasks" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mx-auto my-10 px-4 lg:px-0">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <dash-items-section-group
+              title="Courses you started"
+              more="/student/dashboard/my-courses"
+            >
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <course-item
+                  v-for="(course, key) in courses"
+                  :key="key"
+                  :course="course"
+                />
+              </div>
+            </dash-items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-orange-100">
+      <div class="container mx-auto my-10 px-4 lg:px-0">
+        <div class="grid grid-cols-3 gap-5">
+          <dash-webinars-calendar class="col-span-2" />
+          <dash-pre-recorded-webinars :items="undoneTasks" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mx-auto my-10 px-4 lg:px-0">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <dash-items-section-group
+              title="Saved"
+              more="/student/dashboard/saved-courses"
+            >
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <course-item
+                  v-for="(course, key) in courses"
+                  :key="key"
+                  :course="course"
+                />
+              </div>
+            </dash-items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mx-auto my-10 px-4 lg:px-0">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <dash-items-section-group
+              title="Suggested Courses"
+              more="/student/dashboard/suggested-courses"
+            >
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <course-item
+                  v-for="(course, key) in courses"
+                  :key="key"
+                  :course="course"
+                />
+              </div>
+            </dash-items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container mx-auto my-10 px-4 lg:px-0">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <dash-items-section-group
+              title="Suggested Webinars"
+              more="/student/dashboard/suggested-wibinars"
+            >
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                <course-item
+                  v-for="(course, key) in courses"
+                  :key="key"
+                  :course="course"
+                />
+              </div>
+            </dash-items-section-group>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+
+const courses = require('@/static/json/courses.json')
+
+export default {
+  layout: 'dashboard',
+  fetch({ store }) {
+    store.commit('app/SET_TITLE', 'Dashboard')
+  },
+  data: () => ({
+    courses: _.take(courses, 4),
+    undoneTasks: _.take(courses, 3),
+  }),
+}
+</script>

@@ -21,6 +21,7 @@ export const state = () => ({
 
 // getters
 export const getters = {
+  menu: (state) => state.menu,
   pageTitle: (state) => state.pageTitle,
   pageType: (state) => state.pageType,
   pageData: (state) => state.pageData,

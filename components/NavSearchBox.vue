@@ -13,13 +13,14 @@ export default {}
   background-image: url('/icon/search.svg');
   background-repeat: no-repeat;
   background-color: #fff;
-  background-position: top 25px right 20px;
-  padding: 22px 18px;
+  background-position: top 14px right 14px;
+  padding: 12.5px 50px 12px 18px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  box-sizing: initial;
   box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
   border-radius: 8px;
   min-width: 100%;
+  font-size: 14px;
   outline: none;
 }
 @media only screen and (max-width: 640px) {
