@@ -79,7 +79,7 @@
                   </div>
                 </div>
                 <!-- Learning History -->
-                <div class="border-gray-300 pb-5">
+                <div class="border-gray-300 pb-5 md:mb-20">
                   <p class="text-base font-bold text-gray-700 mb-3">
                     Learning History
                   </p>
