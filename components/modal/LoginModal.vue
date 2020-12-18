@@ -110,7 +110,11 @@
                 </div>
                 <div class="flex text-center pt-8 pb-4 sm:pb-4">
                   <span class="flex mx-auto">
-                    <button type="button" class="btn btn-primary shadow">
+                    <button
+                      type="button"
+                      class="btn btn-primary shadow"
+                      @click="gotoStudentDash"
+                    >
                       Sign in
                     </button>
                   </span>
@@ -215,6 +219,10 @@ export default {
           complete your registration.`,
       })
       this.$store.commit('app/LOGIN_MODAL', false)
+    },
+    gotoStudentDash() {
+      this.$store.commit('app/LOGIN_MODAL', false)
+      this.$router.push('/student/dashboard')
     },
   },
 }

@@ -23,6 +23,28 @@ html {
   margin: 0;
 }
 
+/* custom */
+#__nuxt, #__layout, .layout {
+  min-height: 100%;
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content-wrapper.dashboard {
+  max-width: 1341px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 h1 {
   @apply text-3xl;
 }
