@@ -64,12 +64,12 @@
           </li>
           <li class="nav-item">
             <router-link
-              :to="{ name: 'dashboard-help' }"
-              class="nav-link nav-help"
+              :to="{ name: 'student-faqs' }"
+              class="nav-link nav-faqs"
               active-class="active"
               exact
             >
-              Help
+              FAQs
             </router-link>
           </li>
           <li class="nav-item pt-md-4 mt-5 lg:absolute bottom-0 w-full">
@@ -195,7 +195,7 @@ ul.btn-gray-share > li {
 .nav-link.nav-chat {
   background-image: url('/icon/dashboard/chat.svg');
 }
-.nav-link.nav-help {
+.nav-link.nav-faqs {
   background-image: url('/icon/dashboard/help.svg');
 }
 .nav-link.nav-telegram {

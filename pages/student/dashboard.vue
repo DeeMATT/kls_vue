@@ -100,7 +100,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Suggested Webinars"
-              more="/student/dashboard/suggested-wibinars"
+              more="/student/dashboard/suggested-webinars"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item

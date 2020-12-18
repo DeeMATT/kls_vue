@@ -33,18 +33,40 @@
           </div>
           <a
             href="#"
-            class="user-menu lg:mt-0 block md:inline-block"
-            @click="toggleRegister"
+            class="user-menu lg:mt-0 block md:inline-block relative"
+            @click="toggleUserMenu"
           >
             <span
               class="user-avatar mr-1"
               :style="{ backgroundImage: 'url(/avatar.jpg)' }"
             ></span>
             <div class="inline-block text-left text-xs mr-2 pt-1">
-              <span class="block text-gray-800 font-bold leading-tight">
+              <span class="block text-gray-700 font-bold leading-tight">
                 Oluwadamilare Adedeji
               </span>
               <span class="block text-gray-600">damilare@gmail.com</span>
+            </div>
+            <div
+              class="user-menu-drop shadow-hover relative"
+              :class="{ hidden: !userMenu }"
+            >
+              <div class="px-4 md:px-5 lg:px-6 py-3">
+                <nuxt-link
+                  to="/student/account"
+                  class="text-gray-700 block py-2"
+                >
+                  <span class="text-sm">Account</span>
+                </nuxt-link>
+                <nuxt-link
+                  to="/student/settings"
+                  class="text-gray-700 block py-2"
+                >
+                  <span class="text-sm">Settings</span>
+                </nuxt-link>
+                <nuxt-link to="/" class="text-gray-700 block py-2">
+                  <span class="text-sm">Sign out</span>
+                </nuxt-link>
+              </div>
             </div>
           </a>
         </div>
@@ -58,6 +80,7 @@ import { mapState } from 'vuex'
 export default {
   data: () => ({
     open: false,
+    userMenu: false,
   }),
   computed: {
     ...mapState({
@@ -74,10 +97,9 @@ export default {
       this.open = false
       this.$store.commit('app/LOGIN_MODAL', 'login')
     },
-    toggleRegister(e) {
+    toggleUserMenu(e) {
       if (e) e.preventDefault()
-      this.open = false
-      this.$store.commit('app/LOGIN_MODAL', 'register')
+      this.userMenu = !this.userMenu
     },
   },
 }
@@ -132,6 +154,13 @@ export default {
   padding: 3px;
   @apply border border-gray-400 rounded-xl pr-12;
   @apply align-bottom;
+}
+.user-menu-drop {
+  z-index: 5;
+  top: 52px;
+  min-width: 220px;
+  @apply absolute w-full right-0;
+  @apply bg-white rounded-xl border border-gray-300;
 }
 .user-avatar {
   border-radius: 7.5px;

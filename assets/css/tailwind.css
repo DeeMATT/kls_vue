@@ -145,6 +145,12 @@ input[type="date"] {
   box-shadow: 0px 10px 36px rgba(249, 158, 66, 0.42);
 }
 
+.btn.btn-light.btn-sm {
+  padding: 8.5px 25px;
+  @apply text-sm font-semibold rounded-lg;
+  @apply  text-black bg-gray-300;
+}
+
 .view-more {
   display: inline-block;
   background: url('/actions/arrow-right.svg');
