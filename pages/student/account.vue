@@ -16,7 +16,7 @@
                       <p class="text-sm text-gray-700">Autoplay</p>
                     </div>
                     <div class="col-span-5 text-right">
-                      <input-toggle-switch v-model="autoplay" />
+                      <input-toggle-switch />
                     </div>
                   </div>
                   <div class="grid grid-cols-12">
