@@ -9,88 +9,62 @@
             >
               <div class="px-4 md:px-5 lg:px-6 py-4">
                 <!-- Player -->
-                <div class="border-b border-gray-300 pb-5 mb-4">
-                  <p class="text-base font-bold text-gray-700 mb-3">Player</p>
-                  <div class="grid grid-cols-12 mb-3">
+                <div class="mb-5 lg:mb-20">
+                  <p class="text-sm font-bold text-gray-700 mb-3">
+                    Account Details
+                  </p>
+                  <hr class="mt-4 mb-6" />
+                  <div class="grid grid-cols-12 mb-5">
                     <div class="col-span-7">
-                      <p class="text-sm text-gray-700">Autoplay</p>
+                      <p class="text-sm font-bold text-gray-700 mb-3">Name</p>
+                      <p class="text-sm text-gray-700">Amina Bello</p>
                     </div>
                     <div class="col-span-5 text-right">
-                      <input-toggle-switch />
+                      <button class="btn btn-light btn-sm">Edit</button>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-12 mb-5">
+                    <div class="col-span-7">
+                      <p class="text-sm font-bold text-gray-700 mb-3">Phone</p>
+                      <p class="text-sm text-gray-700">+234 123 4567</p>
+                    </div>
+                  </div>
+                  <div class="grid grid-cols-12 mb-5">
+                    <div class="col-span-7">
+                      <p class="text-sm font-bold text-gray-700 mb-3">Email</p>
+                      <p class="text-sm text-gray-700">damilare@gmail.com</p>
                     </div>
                   </div>
                   <div class="grid grid-cols-12">
                     <div class="col-span-7">
-                      <p class="text-sm text-gray-700">Recommendations</p>
-                    </div>
-                    <div class="col-span-5 text-right">
-                      <input-toggle-switch />
+                      <p class="text-sm font-bold text-gray-700 mb-3">Gender</p>
+                      <p class="text-sm text-gray-700">Female</p>
                     </div>
                   </div>
-                </div>
-                <!-- Payment -->
-                <div class="border-b border-gray-300 pb-5 mb-4">
-                  <p class="text-base font-bold text-gray-700 mb-3">Payment</p>
-                  <div class="grid grid-cols-12">
-                    <div class="col-span-7 my-auto">
+                  <hr class="mt-4 mb-6" />
+                  <div class="grid grid-cols-12 mb-5">
+                    <div class="col-span-7">
+                      <p class="text-sm font-bold text-gray-700 mb-3">
+                        Password
+                      </p>
+                      <p class="text-sm text-gray-700">*****************</p>
+                    </div>
+                    <div class="col-span-5 text-right">
+                      <button class="btn btn-light btn-sm">Change</button>
+                    </div>
+                  </div>
+                  <hr class="mt-4 mb-6" />
+                  <div class="grid grid-cols-12 mb-5">
+                    <div class="col-span-7">
+                      <p class="text-sm font-bold text-gray-700 mb-3">
+                        Payment
+                      </p>
                       <p class="text-sm text-gray-700">
                         Your default payment method is ****1992
                       </p>
                     </div>
                     <div class="col-span-5 text-right">
                       <button class="btn btn-light btn-sm">Change</button>
-                    </div>
-                  </div>
-                </div>
-                <!-- Notifications -->
-                <div class="border-b border-gray-300 pb-5 mb-4">
-                  <p class="text-base font-bold text-gray-700 mb-3">
-                    Notifications
-                  </p>
-                  <div class="grid grid-cols-12">
-                    <div class="col-span-7 lg:col-span-8 my-auto">
-                      <p class="text-sm text-gray-700">Notification option</p>
-                    </div>
-                    <div class="col-span-5 lg:col-span-4 text-right">
-                      <div class="cs-select">
-                        <select class="input">
-                          <option value="">In-app and email</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Language -->
-                <div class="border-b border-gray-300 pb-5 mb-4">
-                  <p class="text-base font-bold text-gray-700 mb-3">Language</p>
-                  <div class="grid grid-cols-12">
-                    <div class="col-span-7 lg:col-span-8 my-auto">
-                      <p class="text-sm text-gray-700">
-                        Select your preferred langiage
-                      </p>
-                    </div>
-                    <div class="col-span-5 lg:col-span-4 text-right">
-                      <div class="cs-select">
-                        <select class="input">
-                          <option value="">English</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Learning History -->
-                <div class="border-gray-300 pb-5">
-                  <p class="text-base font-bold text-gray-700 mb-3">
-                    Learning History
-                  </p>
-                  <div class="grid grid-cols-12">
-                    <div class="col-span-7 my-auto">
-                      <p class="text-sm text-gray-700">
-                        Download learning history
-                      </p>
-                    </div>
-                    <div class="col-span-5 text-right">
-                      <button class="btn btn-light btn-sm">View</button>
                     </div>
                   </div>
                 </div>
@@ -101,11 +75,20 @@
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover relative min-h-full"
             >
-              <div class="block mb-5">
-                <div class="big-avatar relative">
-                  <div class="change-picture text-white my mx-auto">
-                    <button>Change Picture</button>
+              <div class="block mb-2">
+                <div class="big-avatar relative rounded-xl overflow-hidden">
+                  <div
+                    class="grid grid-cols-12 place-items-center py-16 md:py-32 lg:py-40 xl:py-48"
+                  >
+                    <div
+                      class="change-picture col-span-12 text-white mx-auto my-auto"
+                    >
+                      <button class="focus:outline-none">Change Picture</button>
+                    </div>
                   </div>
+                  <div
+                    class="w-full h-full bg-black opacity-50 absolute top-0"
+                  ></div>
                 </div>
               </div>
               <div class="px-4 md:px-5 lg:px-6 py-4">
@@ -134,7 +117,7 @@
                       <span class="checkmark"></span>
                     </label>
                   </li>
-                  <li>
+                  <li class="lg:pb-8">
                     <hr class="my-5" />
                     <label
                       class="checkbox"
@@ -175,18 +158,18 @@ export default {
 <style scoped>
 .big-avatar {
   width: 100%;
-  min-height: 352px;
   background-image: url('/avatar-large.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   @apply bg-gray-200;
 }
 .change-picture {
-  @apply opacity-0 relative;
+  z-index: 1;
 }
 .change-picture > button {
   background-image: url('/icon/camera.svg');
   background-repeat: no-repeat;
-  padding: 5px 5px 5px 20px;
+  padding: 5px 5px 5px 32px;
+  line-height: 20px;
 }
 </style>
