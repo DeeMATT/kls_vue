@@ -117,7 +117,7 @@
                       <span class="checkmark"></span>
                     </label>
                   </li>
-                  <li>
+                  <li class="lg:pb-8">
                     <hr class="my-5" />
                     <label
                       class="checkbox"

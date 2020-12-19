@@ -163,8 +163,34 @@ input[type="date"] {
   background-image: url('/actions/arrow-right-light.svg');
 }
 
+.shadow-orange,
 .shadow-hover:hover {
   box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
+}
+
+/** Custom webkit scrollbar */
+
+.scrollbar-w-2::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+.scrollbar-track-orange-lighter::-webkit-scrollbar-track {
+  --bg-opacity: 1;
+
+  background-color: #f7f8f7;
+  background-color: rgba(241, 243, 242, var(--bg-opacity));
+}
+
+.scrollbar-thumb-orange::-webkit-scrollbar-thumb {
+  --bg-opacity: 1;
+
+  background-color: #ffd5aa;
+  background-color: rgba(255, 213, 170, var(--bg-opacity));
+}
+
+.scrollbar-thumb-rounded::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
 }
 
 /* Custom checkbox style */
@@ -270,6 +296,9 @@ label.checkbox span.checkmark:after {
 }
 
 @media (min-width: 640px) { /* sm: 640px */
+  .max-h-content-screen {
+    max-height: calc(100vh - 170px);
+  }
 }
 
 @media (min-width: 768px) { /* md: 768px */
