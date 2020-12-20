@@ -2,7 +2,7 @@
   <div class="min-h-screen mb-24">
     <section class="bg-orange-100">
       <div class="container mx-auto mb-10 px-4 lg:px-0">
-        <div class="grid grid-cols-4 gap-5">
+        <div class="md:grid grid-cols-4 gap-5 space-y-3 md:space-y-0">
           <dash-item-metrics
             title="5 courses"
             label="In progress"
