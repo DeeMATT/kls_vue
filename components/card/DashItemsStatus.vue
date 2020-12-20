@@ -4,11 +4,11 @@
       <h4 class="text-gray-700 font-extrabold leading-snug mt-0 md:mt-5 mb-4">
         {{ title }}
       </h4>
-      <div class="mb-8">
+      <div class="block">
         <p class="text-xs md:text-sm text-gray-700">{{ undone }}</p>
         <p class="text-xs md:text-sm text-gray-700">{{ done }}</p>
       </div>
-      <div>
+      <div class="hidden md:block mt-8">
         <span
           v-for="(item, key) in items"
           :key="key"
@@ -16,7 +16,7 @@
         ></span>
       </div>
     </div>
-    <div v-if="more" class="absolute md:text-center bottom-0 mb-5 w-full px-5">
+    <div v-if="more" class="absolute text-center bottom-0 mb-5 w-full px-5">
       <nuxt-link :to="more" class="text-gray-700 inline-block">
         <span class="text-xs">See more</span>
       </nuxt-link>

@@ -1,11 +1,12 @@
 <template>
   <div class="layout">
-    <Sidebar />
-    <div class="content-wrapper dashboard px-lg-5 px-md-4 px-3">
-      <DashNavbar />
+    <sidebar />
+    <div class="content-wrapper dashboard">
+      <dash-navbar-mobile v-if="$device.isMobile" />
+      <dash-navbar v-else />
       <div class="container mx-auto px-0 mt-8 mb-5">
         <Nuxt />
-        <DashFooter />
+        <dash-footer />
       </div>
     </div>
   </div>
