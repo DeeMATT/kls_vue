@@ -8,14 +8,14 @@
             :items="courses"
             undone="5 in progress"
             done="3 completed"
-            more="/student/dashboard/my-courses"
+            more="/student/my-courses"
           />
           <dash-items-status
             title="Webinars"
             :items="courses"
             undone="4 upcoming"
             done="3 attended"
-            more="/student/dashboard/my-webinars"
+            more="/student/my-webinars"
           />
           <dash-undone-tasks :items="undoneTasks" />
         </div>
@@ -28,7 +28,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Courses you started"
-              more="/student/dashboard/my-courses"
+              more="/student/my-courses"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item
@@ -57,8 +57,8 @@
         <div class="grid grid-cols-12 gap-4">
           <div class="col-span-12">
             <dash-items-section-group
-              title="Saved"
-              more="/student/dashboard/saved-courses"
+              title="Saved Courses"
+              more="/student/saved-courses"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item
@@ -79,7 +79,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Suggested Courses"
-              more="/student/dashboard/suggested-courses"
+              more="/student/suggested-courses"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item
@@ -100,7 +100,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Suggested Webinars"
-              more="/student/dashboard/suggested-webinars"
+              more="/student/suggested-webinars"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item

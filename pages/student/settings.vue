@@ -3,7 +3,7 @@
     <section class="bg-orange-100">
       <div class="container mx-auto px-4 lg:px-0">
         <div class="grid grid-cols-12 gap-5">
-          <div class="col-span-8 xl:col-span-7">
+          <div class="col-span-full lg:col-span-8 xl:col-span-7">
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover relative"
             >

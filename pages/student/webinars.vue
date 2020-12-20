@@ -28,7 +28,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Upcoming Websinars"
-              more="/student/dashboard/my-webinars"
+              more="/student/my-webinars"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <webinar-item

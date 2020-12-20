@@ -3,7 +3,7 @@
     <section class="bg-orange-100">
       <div class="container mx-auto px-4 lg:px-0">
         <div class="grid grid-cols-12 gap-5">
-          <div class="col-span-7 xl:col-span-8">
+          <div class="col-span-full lg:col-span-7 xl:col-span-8">
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover relative h-full"
             >
@@ -71,14 +71,14 @@
               </div>
             </div>
           </div>
-          <div class="col-span-5 xl:col-span-4">
+          <div class="col-span-full lg:col-span-5 xl:col-span-4">
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover relative min-h-full"
             >
               <div class="block mb-2">
                 <div class="big-avatar relative rounded-xl overflow-hidden">
                   <div
-                    class="grid grid-cols-12 place-items-center py-16 md:py-32 lg:py-40 xl:py-48"
+                    class="grid grid-cols-12 place-items-center py-32 md:py-32 lg:py-40 xl:py-48"
                   >
                     <div
                       class="change-picture col-span-12 text-white mx-auto my-auto"
