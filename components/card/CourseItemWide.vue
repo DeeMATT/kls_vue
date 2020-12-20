@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="'/courses/' + course.slug"
+    :to="view_route"
     class="block bg-white rounded-lg border border-gray-300 shadow-hover"
   >
     <div class="grid grid-cols-12">
@@ -15,7 +15,9 @@
           <div class="pl-5">
             <rating :grade="3" />
           </div>
-          <div class="text-sm text-gray-700 pl-5 md:pl-0 md:text-right pr-5">56 ratings</div>
+          <div class="text-sm text-gray-700 pl-5 md:pl-0 md:text-right pr-5">
+            56 ratings
+          </div>
         </div>
       </div>
       <div class="col-span-5">
@@ -31,6 +33,13 @@
 export default {
   props: {
     course: { type: Object, required: true },
+    session: { type: Boolean, default: false },
+  },
+  computed: {
+    view_route() {
+      const slug = _.get(this.course, 'slug', '')
+      return this.session ? '/student/courses/view/' + slug : '/courses/' + slug
+    },
   },
 }
 </script>

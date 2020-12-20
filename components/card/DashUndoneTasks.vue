@@ -14,10 +14,7 @@
     </div>
     <div class="absolute md:text-center bottom-0 mb-5 w-full px-5">
       <hr class="mb-4" />
-      <nuxt-link
-        to="/student/dashboard/undone-tasks"
-        class="text-gray-700 inline-block"
-      >
+      <nuxt-link to="/student/undone-tasks" class="text-gray-700 inline-block">
         <span class="text-xs">See all</span>
       </nuxt-link>
     </div>

@@ -33,7 +33,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="In progress"
-              more="/student/dashboard/my-courses"
+              more="/student/my-courses"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item
@@ -54,7 +54,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Saved Courses"
-              more="/student/dashboard/saved-courses"
+              more="/student/saved-courses"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item
@@ -75,7 +75,7 @@
           <div class="col-span-12">
             <dash-items-section-group
               title="Suggested Courses"
-              more="/student/dashboard/suggested-courses"
+              more="/student/suggested-courses"
             >
               <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 <course-item

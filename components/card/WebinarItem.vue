@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="'/webinars/' + webinar.slug"
+    :to="view_route"
     class="block bg-white rounded-lg border border-gray-300 shadow-hover relative md:pb-12"
   >
     <div class="absolute mt-3 ml-3">
@@ -34,6 +34,15 @@
 export default {
   props: {
     webinar: { type: Object, required: true },
+    session: { type: Boolean, default: false },
+  },
+  computed: {
+    view_route() {
+      const slug = _.get(this.webinar, 'slug', '')
+      return this.session
+        ? '/student/webinars/view/' + slug
+        : '/webinars/' + slug
+    },
   },
 }
 </script>

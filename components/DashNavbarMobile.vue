@@ -141,6 +141,14 @@ export default {
   background-size: cover;
 }
 
+.user-menu-drop {
+  z-index: 5;
+  top: 45px;
+  min-width: 185px;
+  @apply absolute w-full right-0;
+  @apply bg-white rounded-xl border border-gray-300;
+}
+
 @media (min-width: 768px) {
   .menu-group {
     @apply flex items-center w-auto shadow-none;

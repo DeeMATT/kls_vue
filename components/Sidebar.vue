@@ -219,7 +219,7 @@ ul.btn-gray-share > li {
 
 @media (max-width: 768px) {
   .menu-scroll {
-    height: calc(100vh - 120px);
+    height: calc(100vh - 148px);
     position: relative;
     display: grid;
     overflow-y: scroll;

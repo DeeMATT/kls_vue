@@ -9,14 +9,17 @@
         <p class="text-xs md:text-sm text-gray-700">{{ done }}</p>
       </div>
       <div class="hidden md:block mt-8">
-        <span
+        <img
           v-for="(item, key) in items"
           :key="key"
+          src="https://images.unsplash.com/photo-1549078642-b2ba4bda0cdb?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=3&amp;w=144&amp;h=144"
+          alt="My profile"
           class="course-stacks mr-3"
-        ></span>
+        />
       </div>
     </div>
     <div v-if="more" class="absolute text-center bottom-0 mb-5 w-full px-5">
+      <hr data-v-6cf0f546="" class="mb-4">
       <nuxt-link :to="more" class="text-gray-700 inline-block">
         <span class="text-xs">See more</span>
       </nuxt-link>

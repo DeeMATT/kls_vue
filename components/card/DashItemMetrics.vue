@@ -11,7 +11,7 @@
         <div class="text-right pl-5">
           <!-- <span class="text-xs text-gray-700">Due 12th Oct. 2020</span> -->
           <nuxt-link
-            to="/student/dashboard/undone-tasks"
+            to="/student/undone-tasks"
             class="text-gray-700 inline-block my-3"
           >
             <span class="text-sm">See more</span>
