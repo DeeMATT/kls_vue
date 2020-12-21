@@ -2,30 +2,12 @@
   <div
     class="flex flex-col flex-1 bg-white lg:bg-transparent rounded-xl border border-gray-300 lg:border-0 h-full max-h-screen antialiased"
   >
-    <div class="flex flex-col">
-      <div class="grid grid-cols-2 place-items-center px-10">
-        <button
-          class="menu-btn"
-          :class="{ active: menu === 'groups' }"
-          @click.prevent="changeMenu('groups')"
-        >
-          <p class="text-xs text-gray-700">Groups</p>
-        </button>
-        <button
-          class="menu-btn"
-          :class="{ active: menu === 'contacts' }"
-          @click.prevent="changeMenu('contacts')"
-        >
-          <p class="text-xs text-gray-700">Contacts</p>
-        </button>
-      </div>
-      <hr class="border-gray-300 mx-4 md:mx-0" />
-    </div>
+    <tabs-menu v-model="menu" :tabs="['Groups', 'Contacts']" center />
     <div
       ref="scrollbar"
       class="mt-4 mb-3 mx-2 md:ml-0 md:pl-0 md:mb-0 p-3 pt-1 flex flex-col space-y-4 overflow-y-auto scrollbar-thumb-orange scrollbar-thumb-rounded scrollbar-track-orange-lighter scrollbar-w-2 scrolling-touch"
     >
-      <div v-if="menu === 'contacts'" class="grid gap-4">
+      <div v-if="menu === 1" class="grid gap-4">
         <div
           v-for="(contact, key) in members"
           :key="key"
@@ -87,7 +69,7 @@
 export default {
   data() {
     return {
-      menu: 'groups',
+      menu: 0,
       members: require('@/static/json/members.json'),
       groups: require('@/static/json/groups.json'),
     }
@@ -96,22 +78,12 @@ export default {
     const el = this.$refs.scrollbar
     el.scrollTop = el.scrollHeight
   },
-  methods: {
-    changeMenu(menu) {
-      this.menu = menu
-    },
-  },
 }
 </script>
 
 <style scoped>
 .chat-window {
   height: calc(100% - 38px);
-}
-.menu-btn {
-  border-bottom: 5px solid;
-  padding: 1.09rem 0;
-  @apply inline-block border-transparent outline-none;
 }
 .notice {
   font-size: 9px;
@@ -120,9 +92,6 @@ export default {
 }
 .notice.spaced {
   margin-right: 2px;
-}
-.menu-btn.active {
-  @apply border-orange-500 font-bold;
 }
 @media (max-width: 640px) {
   h4 {

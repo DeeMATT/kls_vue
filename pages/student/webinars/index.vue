@@ -35,6 +35,7 @@
                   v-for="(webinar, key) in webinars"
                   :key="key"
                   :webinar="webinar"
+                  :session="true"
                 />
               </div>
             </dash-items-section-group>

@@ -7,7 +7,7 @@
             <div
               class="flex flex-col flex-1 bg-white rounded-xl border border-gray-300 shadow-hover h-full antialiased"
             >
-              <div class="px-4 py-4 mb-2 sm:mb-0">
+              <div class="px-4 py-4">
                 <div class="relative flex">
                   <input
                     type="text"
@@ -15,7 +15,7 @@
                     class="focus:outline-none focus:placeholder-gray-400 placeholder-gray-600"
                   />
                   <div
-                    class="absolute right-0 items-center inset-y-0 hidden sm:flex"
+                    class="absolute right-0 items-center inset-y-0 flex sm:flex"
                   >
                     <button
                       type="button"
