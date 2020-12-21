@@ -35,6 +35,7 @@
                   v-for="(course, key) in courses"
                   :key="key"
                   :course="course"
+                  :session="true"
                 />
               </div>
             </dash-items-section-group>
@@ -65,6 +66,7 @@
                   v-for="(course, key) in courses"
                   :key="key"
                   :course="course"
+                  :session="true"
                 />
               </div>
             </dash-items-section-group>
@@ -86,6 +88,7 @@
                   v-for="(course, key) in courses"
                   :key="key"
                   :course="course"
+                  :session="true"
                 />
               </div>
             </dash-items-section-group>
@@ -107,6 +110,7 @@
                   v-for="(course, key) in courses"
                   :key="key"
                   :course="course"
+                  :session="true"
                 />
               </div>
             </dash-items-section-group>

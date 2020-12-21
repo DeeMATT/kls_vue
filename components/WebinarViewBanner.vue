@@ -93,12 +93,6 @@ export default {
   @apply bg-gray-200 overflow-hidden rounded-lg;
 }
 
-.social-icons,
-.social-icons > li {
-  display: inline-flex;
-  height: 20px;
-  margin-left: 10px;
-}
 .countdown-timer {
   @apply text-xs text-white font-semibold;
 }

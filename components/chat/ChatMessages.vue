@@ -1,16 +1,11 @@
 <template>
   <div
-    class="flex flex-col flex-1 justify-between bg-white rounded-xl border border-gray-300 shadow-hover h-full max-h-screen antialiased"
+    class="flex flex-col flex-1 justify-between h-full max-h-screen antialiased"
+    :class="{
+      'bg-white rounded-xl border border-gray-300 shadow-hover': !noCard,
+    }"
   >
-    <div class="flex flex-col pt-4 px-4 md:pt-5 md:px-5">
-      <div class="flex flex-row gap-6">
-        <p class="text-sm font-bold text-gray-700">
-          Logo Design Masterclass Chat
-        </p>
-        <p class="text-xs text-gray-600 text-right ml-auto">36 members</p>
-      </div>
-      <hr class="mt-4 border-gray-300" />
-    </div>
+    <slot name="header" />
     <div
       ref="scrollbar"
       class="mt-4 mb-0 mx-2 p-3 pt-1 flex flex-col overflow-y-auto scrollbar-thumb-orange scrollbar-thumb-rounded scrollbar-track-orange-lighter scrollbar-w-2 scrolling-touch"
@@ -235,6 +230,9 @@
 
 <script>
 export default {
+  props: {
+    noCard: { type: Boolean, default: false },
+  },
   data() {
     return {
       messages: require('@/static/json/messages.json'),
