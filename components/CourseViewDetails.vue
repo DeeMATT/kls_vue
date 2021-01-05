@@ -1,6 +1,18 @@
 <template>
-  <div>
-    <video-frame class="rounded-t-none rounded-b-none mb-4" />
+  <div v-if="course">
+    <div class="video mb-4">
+      <vue-plyr v-if="started" ref="plyr" :options="options">
+        <video
+          controls
+          crossorigin
+          playsinline
+          data-poster="/video-sample-bg.jpg"
+        >
+          <source size="720" :src="course.video" type="video/mp4" />
+        </video>
+      </vue-plyr>
+    </div>
+    <!-- <video-frame class="rounded-t-none rounded-b-none mb-4" /> -->
     <div class="px-4 md:px-5 lg:px-6 pt-4">
       <div>
         <h5 class="font-bold mb-3 leading-tight text-gray-700">
@@ -41,3 +53,38 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    course: { type: Object, required: true },
+  },
+  data() {
+    return {
+      options: {
+        controls: [
+          'play-large',
+          'play',
+          'progress',
+          'current-time',
+          'mute',
+          'volume',
+          'pip',
+          'airplay',
+          'fullscreen',
+        ],
+      },
+    }
+  },
+  computed: {
+    started() {
+      return moment(this.course.started) < moment()
+    },
+  },
+  mounted() {
+    this.$refs.plyr.player.on('ended', () => {
+      // show completed modal
+    })
+  },
+}
+</script>

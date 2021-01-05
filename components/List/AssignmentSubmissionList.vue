@@ -2,7 +2,7 @@
   <div
     class="flex flex-col rounded-xl bg-white border border-gray-300 divide-x divide-y divide-gray-300"
   >
-    <div class="flex flex-col mr-auto my-auto text-gray-700 py-4 md:py-6 px-5">
+    <div class="flex flex-col mr-auto my-auto text-gray-700 py-4 md:py-5 px-5">
       <span class="block text-xs font-semibold" :class="{ 'mb-2': desc }">
         {{ name }}
       </span>

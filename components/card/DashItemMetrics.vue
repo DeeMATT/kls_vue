@@ -25,7 +25,7 @@
 <script>
 export default {
   props: {
-    title: { type: Number, required: true },
+    title: { type: String, required: true },
     label: { type: String, required: true },
     more: { type: String, default: null },
   },

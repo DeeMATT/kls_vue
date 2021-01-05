@@ -45,6 +45,10 @@ html {
   margin-left: auto;
 }
 
+:root {
+  --plyr-color-main: #f99e42;
+}
+
 h1 {
   @apply text-3xl;
 }

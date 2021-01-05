@@ -38,6 +38,7 @@ export default {
     { src: '~plugins/validate', mode: 'client' },
     { src: '~plugins/datepicker', mode: 'client' },
     { src: '~plugins/paystack', mode: 'client' },
+    { src: '~/plugins/vue-plyr', mode: 'client' },
   ],
   /*
    ** Auto import components

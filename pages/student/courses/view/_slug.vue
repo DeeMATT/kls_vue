@@ -10,7 +10,7 @@
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover overflow-hidden relative"
             >
-              <course-view-details />
+              <course-view-details :course="course" />
               <div class="px-4 md:px-5 lg:px-6 pb-4">
                 <div class="mb-8">
                   <div class="flex flex-row gap-4 text-gray-700 mt-5">
@@ -78,7 +78,7 @@
                 v-if="$device.isMobile && tab === 0 && tabs.length === 5"
                 class="pb-10"
               >
-                <course-view-details />
+                <course-view-details :course="course" />
               </div>
               <div
                 v-if="
@@ -203,6 +203,27 @@
                 "
                 class="px-4 md:px-5 lg:px-6 py-4 pb-10"
               >
+                <div class="mb-6">
+                  <span class="text-base text-gray-700 font-semibold my-auto"
+                    >Business Research</span
+                  >
+                  <p class="text-xs mt-2 text-gray-700 leading-normal">
+                    Conduct a business research for a conceptual business in any
+                    industry of your choice and give reasons why your proposed
+                    business is an ideal venture. Support your points with data
+                    and other relevant sources.
+                  </p>
+                  <p class="text-xs mt-4 text-gray-700 leading-normal">
+                    To submit, upload your work to a cloud storage service and
+                    share the link in the field below. Please make sure that
+                    your file is set to “public” to enable viewing and download.
+                  </p>
+                </div>
+                <div class="mb-3">
+                  <span class="text-base text-gray-700 font-semibold my-auto"
+                    >Submission</span
+                  >
+                </div>
                 <div class="space-y-4">
                   <assignment-submission-list
                     v-for="(item, key) in [
@@ -227,7 +248,7 @@
                     v-for="(item, key) in [
                       'Businessstats.com / businessfailurerates',
                     ]"
-                    :key="key"
+                    :key="key + 'a'"
                     :name="item"
                     desc="This will show you stats of business failure across countries of the world. This information will be useful for your assignment"
                     link="#"
@@ -237,7 +258,7 @@
                       'Business finance spreadsheet.xls',
                       'Business startup checklist.doc',
                     ]"
-                    :key="key"
+                    :key="key + 'b'"
                     :name="item"
                     link="#"
                     :download="true"
@@ -249,6 +270,7 @@
         </div>
       </div>
     </section>
+    <completed-rating-modal type="course" />
   </div>
 </template>
 

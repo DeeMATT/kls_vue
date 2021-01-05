@@ -1,6 +1,18 @@
 <template>
-  <div>
-    <webinar-video-frame status="countdown" class="rounded-b-none mb-4" />
+  <div v-if="webinar">
+    <div class="video mb-4">
+      <vue-plyr v-if="started" ref="plyr" :options="options">
+        <video
+          controls
+          crossorigin
+          playsinline
+          data-poster="/video-sample-bg.jpg"
+        >
+          <source size="720" :src="webinar.video" type="video/mp4" />
+        </video>
+      </vue-plyr>
+      <webinar-video-frame v-else status="countdown" class="rounded-b-none" />
+    </div>
     <div class="px-4 md:px-5 lg:px-6 py-4">
       <div class="pb-10 md:pb-16">
         <h5 class="font-bold mb-3 leading-tight text-gray-700">
@@ -41,3 +53,39 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    webinar: { type: Object, required: true },
+  },
+  data() {
+    return {
+      options: {
+        controls: [
+          'play-large',
+          'play',
+          'progress',
+          'current-time',
+          'mute',
+          'volume',
+          'pip',
+          'airplay',
+          'fullscreen',
+        ],
+      },
+    }
+  },
+  computed: {
+    started() {
+      return moment(this.webinar.started) < moment()
+    },
+  },
+  mounted() {
+    this.$refs.plyr.player.on('ended', () => {
+      // show completed modal
+      this.$store.commit('app/SET_MODAL', 'completed-rating-modal')
+    })
+  },
+}
+</script>

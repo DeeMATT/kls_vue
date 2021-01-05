@@ -4,7 +4,11 @@
       v-if="label && percentage < 98"
       class="flex flex-row justify-between gap-5 absolute"
     >
-      <span class="text-xs text-gray-700 my-auto">{{ label }}</span>
+      <span
+        class="text-xs my-auto"
+        :class="percentage > 25 ? 'text-gray-900' : 'text-gray-700'"
+        >{{ label }}</span
+      >
       <span class="text-xs text-gray-600 my-auto">
         {{ percentage + '%' }}
       </span>

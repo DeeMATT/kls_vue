@@ -10,7 +10,7 @@
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover overflow-hidden relative h-full"
             >
-              <webinar-view-details />
+              <webinar-view-details :webinar="webinar" />
             </div>
           </div>
           <div class="col-span-full lg:col-span-4 xl:col-span-4">
@@ -19,7 +19,7 @@
             >
               <tabs-menu v-model="tab" :tabs="tabs" />
               <div v-if="$device.isMobile && tab === 0 && tabs.length === 5">
-                <webinar-view-details />
+                <webinar-view-details :webinar="webinar" />
               </div>
               <div
                 v-if="
@@ -59,7 +59,7 @@
                     v-for="(item, key) in [
                       'Businessstats.com / businessfailurerates',
                     ]"
-                    :key="key"
+                    :key="key + 'a'"
                     :name="item"
                     desc="This will show you stats of business failure across countries of the world. This information will be useful for your assignment"
                     link="#"
@@ -69,7 +69,7 @@
                       'Business finance spreadsheet.xls',
                       'Business startup checklist.doc',
                     ]"
-                    :key="key"
+                    :key="key + 'b'"
                     :name="item"
                     link="#"
                     :download="true"
@@ -81,6 +81,7 @@
         </div>
       </div>
     </section>
+    <completed-rating-modal type="webinar" />
   </div>
 </template>
 
@@ -88,7 +89,6 @@
 import Vue from 'vue'
 
 const webinars = require('@/static/json/latest-webinars.json')
-const youLearn = require('@/static/json/courses-you-learn.json')
 
 export default {
   layout: 'dashboard',
@@ -97,9 +97,7 @@ export default {
   },
   data: () => ({
     home: 'home',
-    course: webinars[0],
-    webinars: _.take(webinars, 3),
-    youLearn,
+    webinar: webinars[0],
     tab: 0,
     tabs: ['Chat', 'People', 'Poll', 'Resources'],
   }),
@@ -113,16 +111,6 @@ export default {
       if (e) e.preventDefault()
       const el = document.getElementById(id)
       el.scrollIntoView({ behavior: 'smooth' })
-    },
-    purchaseCourse() {
-      this.$store.commit('app/SET_MODAL', 'purchase-modal')
-      this.$store.commit('app/SET_VIEW_DATA', {
-        type: 'Webinar',
-        title: 'How to Build Multiple Sources of Income',
-        desc: `Learn how to build and manage multiple sources of 
-          income that leads to sustainable wealth`,
-        price: 2500,
-      })
     },
   },
 }
