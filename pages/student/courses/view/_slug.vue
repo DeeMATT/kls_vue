@@ -3,52 +3,15 @@
     <section class="bg-orange-100">
       <div class="container mx-auto mb-10 px-4 lg:px-0">
         <div class="grid grid-cols-12 gap-5">
-          <div class="col-span-full lg:col-span-8 xl:col-span-8">
+          <div
+            v-if="!$device.isMobile"
+            class="col-span-full lg:col-span-8 xl:col-span-8"
+          >
             <div
               class="bg-white rounded-xl border border-gray-300 shadow-hover overflow-hidden relative"
             >
-              <video-frame class="rounded-b-none mb-4" />
-              <div class="px-4 md:px-5 lg:px-6 py-4">
-                <div>
-                  <h5 class="font-bold mb-3 leading-tight text-gray-700">
-                    How to Build Multiple Sources of Income
-                  </h5>
-                  <p class="text-xs mb-4 text-gray-700 leading-normal">
-                    Learn how to build and manage multiple sources of income
-                    that leads to sustainable wealth
-                  </p>
-                  <div class="flex mb-4">
-                    <img src="/avatar.jpg" class="rounded-full mr-3 w-8 h-8" />
-                    <span class="text-xs text-gray-700 block my-auto">
-                      Joy Adeleke</span
-                    >
-                    <ul class="social-icons with-avatar my-auto">
-                      <li class="twitter">
-                        <a href="#"></a>
-                      </li>
-                      <li class="share">
-                        <a href="#"></a>
-                      </li>
-                    </ul>
-                  </div>
-                  <hr class="-mx-4 md:-mx-5 lg:-mx-6" />
-                  <div class="flex flex-row gap-4 text-gray-700 mt-5">
-                    <span class="text-base font-semibold my-auto"
-                      >Starting a business</span
-                    >
-                    <span class="text-xs my-auto">Part 1, Lesson 4</span>
-                  </div>
-                  <p class="text-xs mt-4 text-gray-700 leading-normal">
-                    Anyone who lived in the time of legends such as Henry Ford,
-                    Alexander Graham Bell, Thomas Edison and Albert Einstein
-                    could be forgiven for thinking everything that can be
-                    invented already has been invented. Of course, if we’d
-                    stopped there, we wouldn’t have the computer or the
-                    internet. The past century of our history stands as a
-                    testament to human ingenuity and our persistence to make
-                    things better.
-                  </p>
-                </div>
+              <course-view-details />
+              <div class="px-4 md:px-5 lg:px-6 pb-4">
                 <div class="mb-8">
                   <div class="flex flex-row gap-4 text-gray-700 mt-5">
                     <span class="text-base font-semibold my-auto mb-2"
@@ -56,7 +19,7 @@
                     >
                   </div>
                   <div class="space-y-3">
-                    <download-list
+                    <resource-list
                       v-for="(item, key) in [
                         'Sample business plan.pdf',
                         'Business finance spreadsheet.xls',
@@ -65,6 +28,7 @@
                       :key="key"
                       :name="item"
                       link="#"
+                      :download="true"
                     />
                   </div>
                 </div>
@@ -109,10 +73,24 @@
             <div
               class="flex flex-col flex-1 bg-white rounded-xl border border-gray-300"
             >
-              <tabs-menu :tabs="tabs" />
-              <div class="px-4 md:px-5 lg:px-6 py-4">
+              <tabs-menu v-model="tab" :tabs="tabs" />
+              <div
+                v-if="$device.isMobile && tab === 0 && tabs.length === 5"
+                class="pb-10"
+              >
+                <course-view-details />
+              </div>
+              <div
+                v-if="
+                  (tab === 0 && tabs.length === 4) ||
+                  (tab === 1 && tabs.length === 5)
+                "
+                class="px-4 md:px-5 lg:px-6 py-4"
+              >
                 <div>
-                  <h5 class="font-bold text-gray-700 pt-2 mb-4">How to Build Multiple Sources of Income</h5>
+                  <h5 class="font-bold text-gray-700 pt-2 mb-4">
+                    How to Build Multiple Sources of Income
+                  </h5>
                   <div class="mb-4">
                     <progress-bar :percentage="30" />
                   </div>
@@ -210,6 +188,62 @@
                   </ul>
                 </div>
               </div>
+              <div
+                v-if="
+                  (tab === 1 && tabs.length === 4) ||
+                  (tab === 2 && tabs.length === 5)
+                "
+              >
+                <chat-messages no-card />
+              </div>
+              <div
+                v-if="
+                  (tab === 2 && tabs.length === 4) ||
+                  (tab === 3 && tabs.length === 5)
+                "
+                class="px-4 md:px-5 lg:px-6 py-4 pb-10"
+              >
+                <div class="space-y-4">
+                  <assignment-submission-list
+                    v-for="(item, key) in [
+                      'Business research assignment.doc',
+                      'Business research assignment 2.doc',
+                    ]"
+                    :key="key"
+                    :name="item"
+                    link="#"
+                  />
+                </div>
+              </div>
+              <div
+                v-if="
+                  (tab === 3 && tabs.length === 4) ||
+                  (tab === 4 && tabs.length === 5)
+                "
+                class="px-4 md:px-5 lg:px-6 py-4 pb-10"
+              >
+                <div class="space-y-4">
+                  <resource-list
+                    v-for="(item, key) in [
+                      'Businessstats.com / businessfailurerates',
+                    ]"
+                    :key="key"
+                    :name="item"
+                    desc="This will show you stats of business failure across countries of the world. This information will be useful for your assignment"
+                    link="#"
+                  />
+                  <resource-list
+                    v-for="(item, key) in [
+                      'Business finance spreadsheet.xls',
+                      'Business startup checklist.doc',
+                    ]"
+                    :key="key"
+                    :name="item"
+                    link="#"
+                    :download="true"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -230,6 +264,7 @@ export default {
   layout: 'dashboard',
   fetch({ store }) {
     store.commit('app/SET_DARK_MENU', true)
+    store.commit('app/SET_TITLE', 'Courses')
   },
   data: () => ({
     home: 'home',
@@ -238,6 +273,7 @@ export default {
     courses: _.take(courses, 3),
     youLearn,
     reviews,
+    tab: 0,
     tabs: ['Lessons', 'Chat', 'Assignment', 'Resources'],
   }),
   mounted() {

@@ -12,6 +12,15 @@
   </div>
 </template>
 
+<script>
+export default {
+  updated () {
+    // console.log('default layout mounted')
+    this.$store.commit('app/SET_MENU', false)
+  },
+}
+</script>
+
 <style scoped>
 .layout {
   background: #fcf8f7;
