@@ -84,6 +84,7 @@ export default {
   mounted() {
     this.$refs.plyr.player.on('ended', () => {
       // show completed modal
+      this.$store.commit('app/SET_MODAL', 'completed-rating-modal')
     })
   },
 }

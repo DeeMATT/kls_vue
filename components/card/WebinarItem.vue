@@ -39,9 +39,7 @@ export default {
   computed: {
     view_route() {
       const slug = _.get(this.webinar, 'slug', '')
-      return this.session
-        ? '/student/webinars/view/' + slug
-        : '/webinars/' + slug
+      return `/webinars/${slug}/${this.session ? 'session' : 'view'}`
     },
   },
 }

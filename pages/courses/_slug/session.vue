@@ -235,6 +235,31 @@
                     link="#"
                   />
                 </div>
+                <div class="pt-4 pb-4 mb-2 sm:mb-0">
+                  <div class="relative flex">
+                    <input
+                      type="text"
+                      placeholder="Enter link or upload"
+                      class="focus:outline-none focus:placeholder-gray-400 placeholder-gray-600"
+                    />
+                    <div
+                      class="absolute right-0 items-center inset-y-0 hidden sm:flex"
+                    >
+                      <button
+                        type="button"
+                        class="inline-flex items-center justify-center rounded-full h-12 w-12 transition duration-500 ease-in-out text-white hover:bg-orange-100 focus:outline-none"
+                      >
+                        <img src="/icon/upload.svg" />
+                      </button>
+                      <button
+                        type="button"
+                        class="inline-flex items-center justify-center rounded-full h-12 w-12 mr-2 transition duration-500 ease-in-out text-white hover:bg-orange-100 focus:outline-none"
+                      >
+                        <img src="/icon/send.svg" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 v-if="
@@ -317,3 +342,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+input[type="text"] {
+  box-shadow: 0 10px 36px rgba(249, 158, 66, 0.16);
+  @apply w-full text-gray-600 pl-6 pr-16 bg-white rounded-lg py-5;
+}
+</style>
